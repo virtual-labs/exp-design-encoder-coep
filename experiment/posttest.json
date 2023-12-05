@@ -29,7 +29,7 @@
       "question": "In a photoelectric tachometer, what role does the amplifier play in the signal processing chain?",
       "answers": {
         "a": "Converts light to electricity",
-        "b": " Boosts weak signals,
+        "b": " Boosts weak signals",
         "c": "Filters out infrared radiation",
         "d": "Controls power supply"
       },
