@@ -1,0 +1,132 @@
+	body{
+	  font-size: 16px;
+}
+#checkConfg{
+	font-size:16px;
+}
+.selectConf{
+	
+     height: auto;
+/*     background-color: #2a3138; */
+/*     color: #fff; */
+    font-size: 18px;
+}
+.panelHeadingBold{
+	
+	    font-size: 21px;
+/*     font-weight: bold; */
+}
+.labelstyle
+{
+	font-size:17px;
+}
+.validMaterialMsgStyle{
+	color: #fff;
+    font-size: 19px;
+    padding: 10px;
+    background-color:#ee4c4c;
+        border-radius: 16px
+}
+hr.new3 {
+  border-top: 10px dotted red;
+}
+#CalculateActualFlow
+{
+			background-color: #2a3138;
+			color:#fff;
+			padding:5px 20px 5px 5px;
+			margin: 5px;
+}	
+#testSubmit
+{
+	padding: 10px;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 10px;
+	background-color: #212529;
+	margin: 20px 10px;;
+	letter-spacing: 1px;
+	font-weight: bold;
+/* 	box-shadow: 0 5px #999; */
+}
+#questionDiv .queno
+{ background-color:#2a3138; 
+padding:12px; color:#fff; 
+font-size: 20px;
+ border-radius: 10px; 
+ font-family: Cambria, Georgia, serif;
+ }
+.nextLevelBtn {
+	padding: 10px;
+    border-radius: 10px;
+    background-color: #212529;
+    color: #fff;
+    margin: 20px 10px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+.panel-primary>.panel-heading,.card-header,.modal-header,.selectbg {
+background:#4d6c71;
+	color:#fff;
+	border-color:#000;	
+}	
+.boldTextBlue{
+	color:Blue;
+	letter-spacing: 0px;
+	font-size: 18px;
+}
+.boldTextRed{
+	color:Red;
+	letter-spacing: 0px;
+	font-size: 18px;
+}
+.boldTextGreen{
+	color:green;
+	letter-spacing: 0px;
+	font-size: 18px;
+}
+.model
+{
+	padding:0px;
+} 
+#modelMsg{
+	font-size: 20px;
+    color: red;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+.typeSelector
+{
+	    background-color: #2a3138;
+    margin-top: 20px;
+    padding: 20px;
+    color: #fff;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+} 

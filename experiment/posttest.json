@@ -2,38 +2,85 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": " How does a photoelectric tachometer differ from a magnetic tachometer?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+         "a": " Measurement of electrical resistance",
+        "b": " Detection of light intensity",
+        "c": " Utilization of radio waves",
+        "d": "Monitoring gravitational forces"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      
+      "correctAnswer": "b",
+      "difficulty": " Detection of light intensity"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What is the significance of a reflective surface in the context of a photoelectric tachometer?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Enhances speed accuracy",
+        "b": "Decreases sensitivity",
+        "c": " Causes interference",
+        "d": "Irrelevant to the measurement"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+     
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "Causes interference"
+    },
+    {
+      "question": "In a photoelectric tachometer, what role does the amplifier play in the signal processing chain?",
+      "answers": {
+        "a": "Converts light to electricity",
+        "b": " Boosts weak signals,
+        "c": "Filters out infrared radiation",
+        "d": "Controls power supply"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": " Boosts weak signals"
+    },
+	{
+      "question": "What type of applications benefit most from the use of a photoelectric tachometer?",
+      "answers": {
+        "a": "Static measurements",
+        "b": " High-temperature environments",
+        "c": "Continuous monitoring of rotating machinery",
+        "d": "Non-rotational speed assessments"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "Continuous monitoring of rotating machinery"
+    },
+	
+	{
+      "question": "How does a photoelectric tachometer contribute to preventive maintenance practices?",
+      "answers": {
+        "a": " By generating random readings",
+        "b": "Identifying potential faults early",
+        "c": " Only functioning in reactive maintenance",
+        "d": " Ignoring irregularities in speed"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": " Identifying potential faults early"
+    },
+  
+  {
+      "question": "What impact does the color of the target surface have on the performance of a photoelectric tachometer?",
+      "answers": {
+        "a": " No effect",
+        "b": "Alters accuracy",
+        "c": "  Increases power consumption",
+        "d": " Impacts infrared transmission"
+      },
+     
+      "correctAnswer": "d",
+      "difficulty": " Impacts infrared transmission"
     }
+  
+  
+  
+  
+  
   ]
 }
+
+ 

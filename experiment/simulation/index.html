@@ -1,13 +1,111 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+<head>
+<title> Photoelectric Tachometer </title>
+<meta charset="ISO-8859-1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" > -->
+    <link rel="stylesheet" href=" https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/mainPage.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/PET.CSS">
+
+</head>
+
+
+<body  style="padding-right: 17px;">
+
+<header>
+		<img class="COEPLogo" src='images/COEPlogo.png' />
+		<img class="VlabLogo" src='images/vlablogo.jpg' />
+		<span id="colgName">COLLEGE OF ENGINEERING, PUNE</span>		
+		
+	</header>
+	<div  class="row typeSelector" >
+	<div  class="col-sm-2">
+<!-- 	 <label for="sel1">Select list (select one):</label> -->
+	 </div>
+	<div  class="col-sm-2">
+	 <label for="sel1">SELECT TACHOMETER TYPE</label>
+	 </div>
+	
+     <div  class="col-sm-6"> 
+      <select class="form-control" id="typetacho" name="sellist1">
+        <option value="0">--- Select Tachometer Type --- </option>
+	   <option value="1">Photoelectric Tachometer</option>
+<!-- 	  <option value="2">Toothed Rotor Variable Reluctance Tachometer</option> -->
+<!-- 	   <option value="40">Ring type load cell</option> -->
+      </select>
+      </div>
+    
+      </div>
+<div  class="row container-fluid" id="main-div1">
+	<div class="col-lg-5" id="main-div" >
+				<div class="panel panel-primary">
+	      			<div class="panel-heading " id="panelHeading1"><center id="centerText1"><h4 class="panelHeadingBold">CONFIGURATION </h4></center>
+	      			</div>
+	     			<div class="panel-body" id="main-div-conf" >
+	     			
+	     			</div>
+	      			<div class="panel-body" id="tableDesign">
+	      			
+	      			</div>
+	     		</div>
+	   	</div>
+	   
+	   
+			<div class="col-lg-7" id="canvas">
+	             <div class="panel panel-primary" >
+	      			<div class="panel-heading " id="panelHeading2" ><center id="centerText2"><h4 class="panelHeadingBold"> DIAGRAM</h4></center>
+	      			</div>
+	      			<label  id="counter"></label>
+	      			<div class="panel-body" id="canvas-div" >
+	      			<img src="images/maindig.png" class="img-fluid" >
+	      			</div>
+	      			
+					
+					
+	      			
+	   			</div>
+	       </div>
+	</div>
+	
+	<footer>
+Copyrights &copy; COEP - Virtual Lab
+</footer>
 </body>
+
+<!-- https://code.jquery.com/jquery-3.5.1.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+<script type="text/javascript" src="lib/raphael.js"></script>
+<script type="text/javascript" src="lib/raphael.min.js"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+ 
+ 
+  <script type="text/javascript" src="src/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script type="text/javascript" src="src/questionJson.js"></script>
+<script type="text/javascript" src="src/questions.js"></script>
+<!-- <script type="text/javascript" src="src/fualtFinding.js"></script> -->
+<script type="text/javascript" src="src/mainPage.js"></script>
+
+<script type="text/javascript" src="src/mimic.js"></script>
+<script type="text/javascript" src="src/table.js"></script>
+<!-- <script type="text/javascript" src="src/resultAnaylsis.js"></script> -->
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+<!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 </html>
