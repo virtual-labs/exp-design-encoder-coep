@@ -2,61 +2,61 @@
   "version": 2.0,
   "questions": [
     {
-      "question": " The linear resistance element flow meters principle is based on __________________ equation?",
+      "question": " What is the primary function of a photoelectric tachometer?",
       "answers": {
-         "a": "Hagen Poiseuille",
-        "b": "Faraday's Law",
-        "c": "Hall effect",
-        "d": "None of the above"
+         "a": "Measure temperature",
+        "b": "Measure speed",
+        "c": " Measure pressure",
+        "d": " Measure voltage"
       },
       
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "What is the necessity of flow measurement?",
+      "question": "Which principle does a photoelectric tachometer rely on?",
       "answers": {
-        "a": "Drinking purpose",
-        "b": "Construction purpose",
-        "c": "Laboratory purpose",
-        "d": "All the above"
-      },
-     
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "The flow meters are classified based on ________________?",
-      "answers": {
-        "a": "Rate of flow",
-        "b": "Weight",
-        "c": "Volume",
-        "d": "All the above"
-      },
-     
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-	{
-      "question": "Which one of the following meters is a type of mechanical flow meter?",
-      "answers": {
-        "a": "Hot wire",
-        "b": "Cup type",
-        "c": "Turbine",
-        "d": "None of the above"
+        "a": "Ohm's Law",
+        "b": " Doppler Effect",
+        "c": "Photoelectric Effect",
+        "d": "Newton's Law of Motion"
       },
      
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
+    {
+      "question": "What type of light source is commonly used in a photoelectric tachometer?",
+      "answers": {
+        "a": "Incandescent bulb",
+        "b": "LED",
+        "c": " Fluorescent tube",
+        "d": "Laser"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "In a photoelectric tachometer, what component detects the light and generates a signal?",
+      "answers": {
+        "a": "Photodiode",
+        "b": "Capacitor",
+        "c": "Resistor",
+        "d": "Inductor"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
 	
 	{
-      "question": "Which one of the following is a type of flow encountered?",
+      "question": "How does a photoelectric tachometer respond to changes in speed?",
       "answers": {
-        "a": "Quantity meters",
-        "b": "Wet or dry",
-        "c": "Positive displacement meters",
-        "d": "None of the above"
+        "a": "Decreases sensitivity",
+        "b": "Increases sensitivity",
+        "c": "Maintains constant sensitivity",
+        "d": "Shuts down"
       },
      
       "correctAnswer": "b",
