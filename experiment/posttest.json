@@ -2,79 +2,68 @@
   "version": 2.0,
   "questions": [
     {
-      "question": " How does a photoelectric tachometer differ from a magnetic tachometer?",
+      "question": " What unit is commonly used to express the speed measured by a tachometer?",
       "answers": {
-         "a": " Measurement of electrical resistance",
-        "b": " Detection of light intensity",
-        "c": " Utilization of radio waves",
-        "d": "Monitoring gravitational forces"
+         "a": "Watts",
+        "b": "Hertz",
+        "c": " Revolutions per minute (RPM)",
+        "d": "  Volts"
       },
       
-      "correctAnswer": "b",
-      "difficulty": " Detection of light intensity"
-    },
-    {
-      "question": "What is the significance of a reflective surface in the context of a photoelectric tachometer?",
-      "answers": {
-        "a": "Enhances speed accuracy",
-        "b": "Decreases sensitivity",
-        "c": " Causes interference",
-        "d": "Irrelevant to the measurement"
-      },
-     
       "correctAnswer": "c",
-      "difficulty": "Causes interference"
+      "difficulty": "beginner"
     },
     {
-      "question": "In a photoelectric tachometer, what role does the amplifier play in the signal processing chain?",
+      "question": "What is the advantage of using a photoelectric tachometer over a mechanical one?",
       "answers": {
-        "a": "Converts light to electricity",
-        "b": " Boosts weak signals",
-        "c": "Filters out infrared radiation",
-        "d": "Controls power supply"
+        "a": "Lower cost",
+        "b": " Higher accuracy",
+        "c": "Simplicity of design",
+        "d": "No power source required"
       },
      
       "correctAnswer": "b",
-      "difficulty": " Boosts weak signals"
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which environmental factor can affect the performance of a photoelectric tachometer?",
+      "answers": {
+        "a": "Humidity",
+        "b": "Magnetic field",
+        "c": "Sound waves",
+        "d": "Static electricity"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
     },
 	{
-      "question": "What type of applications benefit most from the use of a photoelectric tachometer?",
+      "question": "What is the purpose of a feedback loop in a closed-loop photoelectric tachometer system?",
       "answers": {
-        "a": "Static measurements",
-        "b": " High-temperature environments",
-        "c": "Continuous monitoring of rotating machinery",
-        "d": "Non-rotational speed assessments"
+        "a": "Increase power consumption",
+        "b": "Improve accuracy and stability",
+        "c": "Decrease sensitivity",
+        "d": "Disable the tachometer"
       },
      
-      "correctAnswer": "c",
-      "difficulty": "Continuous monitoring of rotating machinery"
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     },
 	
 	{
-      "question": "How does a photoelectric tachometer contribute to preventive maintenance practices?",
+      "question": "How does the color of the target object impact a photoelectric tachometer's performance?",
       "answers": {
-        "a": " By generating random readings",
-        "b": "Identifying potential faults early",
-        "c": " Only functioning in reactive maintenance",
-        "d": " Ignoring irregularities in speed"
+        "a": "No impact",
+        "b": "Increases sensitivity",
+        "c": "Decreases sensitivity",
+        "d": "Changes the light source"
       },
      
-      "correctAnswer": "b",
-      "difficulty": " Identifying potential faults early"
-    },
-  
-  {
-      "question": "What impact does the color of the target surface have on the performance of a photoelectric tachometer?",
-      "answers": {
-        "a": " No effect",
-        "b": "Alters accuracy",
-        "c": "  Increases power consumption",
-        "d": " Impacts infrared transmission"
-      },
-     
-      "correctAnswer": "d",
-      "difficulty": " Impacts infrared transmission"
+      "correctAnswer": "c",
+      "difficulty": "beginner"
     }
+  
+  
   
   
   
@@ -82,5 +71,3 @@
   
   ]
 }
-
- 
