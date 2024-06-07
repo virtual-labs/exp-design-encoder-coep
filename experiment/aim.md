@@ -1,4 +1,3 @@
-
 ### Aim
   Understand operation of encoder
   
