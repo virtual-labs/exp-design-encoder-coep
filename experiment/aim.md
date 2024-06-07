@@ -1,7 +1,7 @@
 
-## Aim
+### Aim
   Understand operation of encoder
-### Objectives:
-
+  
+### Objectives 
 - Understand operation of encoder  
 - Observe photoelectric tachometer output for speed variation
