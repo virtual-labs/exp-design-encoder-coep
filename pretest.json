@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": " What is the primary function of a photoelectric tachometer?",
+      "answers": {
+         "a": "Measure temperature",
+        "b": "Measure speed",
+        "c": " Measure pressure",
+        "d": " Measure voltage"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which principle does a photoelectric tachometer rely on?",
+      "answers": {
+        "a": "Ohm's Law",
+        "b": " Doppler Effect",
+        "c": "Photoelectric Effect",
+        "d": "Newton's Law of Motion"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What type of light source is commonly used in a photoelectric tachometer?",
+      "answers": {
+        "a": "Incandescent bulb",
+        "b": "LED",
+        "c": " Fluorescent tube",
+        "d": "Laser"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "In a photoelectric tachometer, what component detects the light and generates a signal?",
+      "answers": {
+        "a": "Photodiode",
+        "b": "Capacitor",
+        "c": "Resistor",
+        "d": "Inductor"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "How does a photoelectric tachometer respond to changes in speed?",
+      "answers": {
+        "a": "Decreases sensitivity",
+        "b": "Increases sensitivity",
+        "c": "Maintains constant sensitivity",
+        "d": "Shuts down"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  
+  
+  
+  
+  
+  
+  
+  ]
+}
