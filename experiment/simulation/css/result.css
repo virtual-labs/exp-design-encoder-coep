@@ -1,0 +1,124 @@
+
+.tabletd
+{
+	background-color: #41c960;
+    padding: 6px 14px;
+    border-style: groove;
+    border-radius: 10px ;
+    /* margin-top: 11px; */
+    color: #fff;
+    font-weight: bolder;
+}
+.nameTitle{
+	background-color: #445f66; color: #ddd;
+	    box-shadow: 6px 2px #e9ecef;
+	    border-radius: 11px;
+	    padding: 5px;
+	        border-style: double;
+}
+.blink {
+      animation: blink-animation 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+.subTitle{
+	color: #fff;
+}
+.appTitle{
+	background-color: #43696f;
+    padding: 10px;
+    color: #fff;
+   
+    border-radius: 31px;
+    border-style: double;
+}
+.alert
+{
+/* 	padding:5px; */
+	border-style: outset;
+    box-shadow: 2px 4px;
+}
+.attainedText{
+	padding:4px;
+}
+.stageLabel{
+font-weight: bolder;	
+}
+ th, td {
+/*             border: 1px solid #000; */
+           
+            text-align: center; /* Horizontally center */
+            vertical-align: middle; /* Vertically center */
+ }
+ .resultMainPage{
+ color: #333;
+    padding: 10px;
+    border-style: dashed;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+ }
+ /* Media query for laptops */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  
+
+  .subTitle {
+    font-size: 14px; /* Example for headers */
+  }
+
+}
+ .panel-default>.panel-heading{
+background-color: #43696f;
+ }
+ 
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 320px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+input[type="number"] {
+    min-width: 50px;
+}
+
+ 

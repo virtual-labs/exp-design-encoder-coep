@@ -1,20 +1,24 @@
 ### Procedure
 
-#### Prerequisite : 
-- Answer all the questions and click on "Submit Test" button.
-- Click on "Next" button.
 
+Attempt all question
 
-##### Tachometer type : Phoelectric Tachometer
+Step 1 : Select number of holes on the disc
 
-- Step 1 : Configure Phoelectric Tachometer by selecting number of holes and selecting speed in RPM.
+Step 2 : Select speed from drop down menu
 
-- Step 2 : Click on "Start Mimic" button.
+Step 3 : Calculate Pulses for selected speed
 
-- Step 3 : Calculate number of pulses for different value of speed and submit it by clicking on "Submit" button.
+Step 4 :Repeat step 1 to 3 for different 5 readings
 
-- Step 4 : Repeat Step 3 for different values of speed.
+Step 5 :Go to next level
 
-- Step 5 : After taking 5 different readings you will get the observation table.
+Step 6 :Click on start button and set RPM 
 
+Step 7 : Observe the pluses and calculate accuracy (%) 
 
+Step 8 :Repeat step 6 and 7 for different 5 readings 
+
+Step 9 :Go to next level and observe graph
+
+         
