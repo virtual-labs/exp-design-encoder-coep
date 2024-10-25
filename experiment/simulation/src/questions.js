@@ -1,4 +1,4 @@
-	
+	resultMasterJson ={};
 	
 			var flag = false;
 			var myRadio = null;
@@ -58,7 +58,7 @@
 				+ '       <p id="modelMsg">This is a small modal.</p>'
 				+ '     </div>'
 				+ '     <div class="modal-footer">'
-				+ '       <button type="button" class="btn btn-danger" data-dismiss="modal" id="btnNext" >OK</button>'
+				+ '       <button type="button" class="btn btn-danger" data-dismiss="modal" id="btnNext" >NEXT</button>'
 				+ '     </div>'
 				+ '   </div>'
 				+ ' </div>'
@@ -120,7 +120,12 @@
 						$("#modelMsg").html("<b class='boldTextGreen'>Test Submitted Successfully . Correct Answers Are : " + ansCount + "</b>");
 						flg = true;
 						$("body").css("padding","0px 0px 0px 0px");
-						$("#typetacho").prop("disabled",true);
+						
+//						selectDesign();
+						tempJson={};
+						tempJson.correctQuestion=ansCount;
+						resultMasterJson.question=tempJson;
+						console.log(resultMasterJson);
 		   					
 					}
 

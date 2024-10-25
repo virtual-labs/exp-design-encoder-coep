@@ -6,7 +6,7 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "There are -----types of optical encoder:",
+					"QC": "There are _____ types of optical encoder :",
 					"ANS": [{
 						"ANSID": false,
 						"content": "4"
@@ -87,7 +87,7 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "A tachometer encoder has-----",
+					"QC": "A tachometer encoder has ____",
 
 
 					"ANS": [{

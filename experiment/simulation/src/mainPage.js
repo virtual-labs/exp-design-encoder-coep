@@ -1,3 +1,8 @@
+
+
+var speed1=0;
+var noh=0;
+var ansCount=1;
 function config1(){
 	arrayJson=[];
 	masterJson={};
@@ -10,23 +15,17 @@ data = {};
 dataJson = {};
 var wrongCounter=0;
 var htm='<div class="row" >'
-//		+'<div class="col-sm-6">'
-//	   +'<label class="labelstyle">Select speed (RPM) </label>'
-//	   +'</div>'
-//	   +'<div class="row">'
-	   +'<div class="col-sm-6">'
-	   +'<label class="labelstyle">Select Number Of Holes</label>'
+		+'<div class="col-sm-6">'
+	   +'<label class="labelstyle">Select Number of holes on the disc</label>'
 	   +'</div>'
 	   
 	   +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf"  id="noh" style="height:auto;" >'
-	   +'<option value="0">--- Select Number Of Holes --- </option>'
+	   +'<option value="0">--- Select disc type --- </option>'
+	   +'<option value="2" >2  </option>'
+	   +'<option value="4" >4  </option>'
+	   +'<option value="8" >8  </option>'
 	   +'<option value="16" >16  </option>'
-//	   +'<option value="2" >2  </option>'
-//	   +'<option value="21">21</option>'
-//	   +'<option value="37" >37  </option>'
-	 
-	  
 	   +'</select>'
 	   +'</div>'
 	   +'</div>'
@@ -35,11 +34,22 @@ var htm='<div class="row" >'
 	  
 	   +'<div class="col-sm-6">'
 	
-	   +'<label class="labelstyle">Select speed (RPM)(Min:100 - Max:1800)</label>'
+	   +'<label class="labelstyle">Select speed (RPM)(Min:100 - Max:1000)</label>'
 	   +'</div>'
 	   +'<div class="col-sm-6">'
-	   +' <input type="range" min="100" max="1800" value="18" id="speed">'
-	   +'<center><span id="sliderValue"></span></center>'
+	   +'<select  class="form-control selectConf"  id="speed" style="height:auto;" >'
+	   +'<option value="0">--- Select Speed in RPM --- </option>'
+	   +'<option value="100" >100  </option>'
+	   +'<option value="200" >200  </option>'
+	   +'<option value="300" >300  </option>'
+	   +'<option value="400" >400  </option>'
+	   +'<option value="500" >500  </option>'
+	   +'<option value="600" >600  </option>'
+	   +'<option value="700" >700  </option>'
+	   +'<option value="800" >800  </option>'
+	   +'<option value="900" >900  </option>'
+	   +'<option value="1000" >1000  </option>'
+	   +'</select>'
 	   +'</div>'
 	  
 	   +'</div>'
@@ -56,8 +66,8 @@ var htm='<div class="row" >'
 	   +'</div>'
 	  +'<br>'
 	   +'<div class="row"  >'
-	   +'<div class="col-sm-12" id="mimicbtnquesAns">'
-	 +'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" id="checkConfg" ><b>Start Mimic</b></button>'
+	   +'<div class="col-sm-12" id="mimicbtnquesAns" >'
+	 +'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" id="checkConfg" disabled><b>CALCULATE</b></button>'
 	   
 	      +'</div>'
 	      
@@ -66,7 +76,7 @@ var htm='<div class="row" >'
 	   +'</div>'
 	   + '<div class="row"  id="CalculateActualFlow" hidden>'
 		   +'<div class=" col-sm-4">'
-	       +'<label  id=""  class="" style="font-size:16px;margin:15px 10px ;">Count Number of Pulses  : </label>'
+	       +'<label  id=""  class="" style="font-size:16px;margin:15px 10px ;">Calculate Number of Pulses  : </label>'
 	       +'</div>'
            +'<div class="col-sm-4">'
 	       +'<input type="text" id="flowAns"  style=margin:15px 10px;width:100%;"  class=" form-control" />'
@@ -99,50 +109,70 @@ var htm='<div class="row" >'
 	
   $("#main-div-conf").html(htm);
 
-var value=0;
-var noh=0;
-		$(document).on('input', '#speed', function() {
-			value = parseInt($(this).val());
-		    $('#sliderValue').html(value);
-		});
-	 
-	 
-	  
+		
+		$("#speed").change(function(){
+			  $("#checkConfg").prop("disabled",false);
+			  noh= parseInt($("#noh").children(":selected").attr("value"));
+			  speed1=parseInt($("#speed").children(":selected").attr("value"));
+			  if(noh==0 || speed1==0)
+			  {
+			  	$("#validMaterialMsg").html("wrong Configuration.");
+			  	 console.log("hole"+noh);
+			  	 console.log("speed"+speed1);
+			  	$("#validMaterialMsg").prop("hidden",false);
+				
+			  	
+			  }
+		  });
+		$("#noh").change(function(){
+			  $("#noh").prop("disabled",false);
+			  noh=parseInt($("#noh").children(":selected").attr("value"));
+			  speed1=parseInt($("#speed").children(":selected").attr("value"));
+			  if(noh==0)
+			  {
+			  	$("#validMaterialMsg").html("wrong Configuration.");
+			  	 console.log("hole"+noh);
+			  	console.log("speed"+speed1);
+			
+			  	$("#validMaterialMsg").prop("hidden",false);
+			  }
+		  });
 	   $("#checkConfg").click(function(){
-//		 if($("#noh").val()=="0")  
-//		 {
-//			 $("#modelMsg").html("Please select required field. ");
-//				
-//		 }  
-//		   
-//	   else{
+
 		   $("#flowAns").val('');
 			$("body").css("padding","0px 0px 0px 0px");
-		   $("#noh").prop("disabled",true);
+		   $("#noh,#speed").prop("disabled",true);
 		  noh= parseInt($("#noh").val());
 		  console.log("hole"+noh);
-		  console.log("value"+value);
-		  if(noh==0 || value==0)
+		
+		  speed1=parseInt($("#speed").children(":selected").attr("value"));
+		   $("#speed option[value="+speed1+"]").css("background-color","#dacecf");
+		   
+		   $("#speed option[value="+speed1+"]").attr("disabled",true);
+		  if(noh==0 || speed1==0)
 			  {
 			  	$("#validMaterialMsg").html("Select Number Of Holes.");
 			  	 console.log("hole"+noh);
-			  	 console.log("value"+value);
+			
 			  	$("#validMaterialMsg").prop("hidden",false);
 			  }
 		  else
 			  {
-
-			  		mimic(value,noh);
+//			  		mimic(value,noh);
+			  $("#CalculateActualFlow").prop("hidden",false);
+			  $("#checkConfg").prop("disabled",true);
 				 }
+	   });
 			var id=0;
 		  $("#btnAnsCheck").click(function() {
+			  ansCount++;
 				$("body").css("padding","0px 0px 0px 0px");
 			   var flowAns = $("#flowAns").val();
 			  
 				console.log("ans check"+flowAns);
-				flow=value*noh;
+				flow=speed1*noh;
 
-				if(flowAns==""){
+				if(flowAns=="" || isAlphabetical(flowAns)){
 					
 					$("#modelMsg").html("Enter numeric value ");
 					
@@ -153,26 +183,28 @@ var noh=0;
 						if (flowAns == flow) {
 							
 							
-							 $("#modelMsg").css("color", "blue");
+							 $("#modelMsg").css("color", "#a94442");
 							$("#modelMsg").html("Change the Speed and take  next reading .   ");
 							
 							$("#CalculateActualFlow").prop("hidden",true);
 							$("#checkConfg").prop("hidden",false);	
+							 $("#speed").prop("disabled",false);
+							 id=0;
 							addtoMasterJson();
-							tableCreate();
-
+							//tableCreate();
+							
 							
 						} else if (flowAns != flow) {
 							
 							 $("#modelMsg").css("color", "red");
-						$("#modelMsg").html("Entered value is incorrect.Try again . ");
+						$("#modelMsg").html("<b>Entered value is incorrect.Try again .</b> ");
 						
 						}
 
 
 					} else if (id == 4) {
-						 $("#modelMsg").css("color", "blue");
-						$("#modelMsg").html("FORMULA : PULSES = SPEED * NUMBER OF HOLES  ");
+						 $("#modelMsg").css("color", "#a94442");
+						$("#modelMsg").html("<b>FORMULA : PULSES = SPEED * NUMBER OF HOLES</b>  ");
 						
 					} else {
 						flowAns = $("#flowAns").val();
@@ -180,18 +212,20 @@ var noh=0;
 						if (flowAns == flow) {
 							
 							
-							$("#modelMsg").css("color", "blue");
-							$("#modelMsg").html("Change the Speed and take  next reading .  ");
+							$("#modelMsg").css("color", "#a94442");
+							$("#modelMsg").html("<b>Change the Speed and take  next reading . </b> ");
 							$("#CalculateActualFlow").prop("hidden",true);
 							$("#checkConfg").prop("hidden",false);
+							$("#speed").prop("disabled",false);
+							id=0;
 							addtoMasterJson();
-							tableCreate();
+						//	tableCreate();
 							
 							
 							
 						} else {
-							
-							$("#modelMsg").html("Correct answer is " + flow);
+							$("#modelMsg").css("color", "#28a745");
+							$("#modelMsg").html("<b>Correct answer is " + flow+"</b>");
 							
 
 						}
@@ -201,17 +235,60 @@ var noh=0;
 					function addtoMasterJson()
 					{
 						tempJson={};
-						tempJson.value1 = value;
+						tempJson.speed = speed1;
 						tempJson.noh = noh;
 						tempJson.flow = flow;
 						arrayJson.push(tempJson);
 						masterJson.demo = arrayJson;
 						console.log(masterJson);
 						tableCreate(masterJson);
+						tempJson={};
+						tempJson.stdPulsesCount=ansCount;
+						resultMasterJson.std=tempJson;
+						console.log(resultMasterJson);
 					}
 				});
 //	   }
-	   });
+	   
+//		$("#typetacho").change(function(){
+//		typetacho1=$("#typetacho").children(":selected").attr("value");
+//		
+//		
+//		   if(typetacho1==0){
+//			  
+//				   $("#error").html("<b style='font-size:14px;color:red'>Select Tachometer Type</b>");
+//				   $("#speed,#noh").prop("disabled",true);
+//				   
+//		   }
+//		   else if(typetacho1==1)
+//			   {
+//			   $("#speed,#noh").prop("disabled",false);
+//			   $("#error").prop("hidden",true);
+//			   $("#typetacho").prop("disabled",true);
+//			  
+//			   str=''
+//				   +'<option value="0">--- Select disc type --- </option>'
+//				   +'<option value="2" >2  </option>'
+//				   +'<option value="4" >4  </option>'
+//				   +'<option value="16" >16  </option>'
+//				   $("#noh").html(str);
+//			   }
+//		   else if(typetacho1==2)
+//			 {
+//			   $("#speed,#noh").prop("disabled",false);
+//			 $("#error").prop("hidden",true);
+//			 $("#typetacho").prop("disabled",true);
+//			 
+//		   str=''
+//			   +'<option value="0">--- Select rotor toothed type --- </option>'
+//			   +'<option value="8" >8  </option>'
+//			   +'<option value="13" >13  </option>'
+//			   +'<option value="17" >17  </option>'
+//			   $("#noh").html(str);
+//		   }
+//		 
+//		  
+//	});
 
 	  
 }	
