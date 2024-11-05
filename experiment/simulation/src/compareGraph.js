@@ -4,8 +4,8 @@ function compareGraph()
 			$("#procedure").prop("hidden",true);
 		$("#result").prop("hidden",false);
 //		alert("GRAPH");
-		$("#centerText1").html("Table & Graph (Standard frequency) ");
-		$("#centerText2").html("Table & Graph (Actual frequency) ");
+		$("#centerText1").html("READINGS  ");
+		$("#centerText2").html("OBSERVATION");
 		table1();
 		
 		table2();
@@ -18,6 +18,7 @@ function table1()
 {
 
 	var tableMainDiv = '<div class="well well-lg">'
+		+'<center class="tableheadingStyle">TABLE-1 (Standard readings)</center>'
         + '<table class="table table-bordered" >'
 		+ ' <thead>'
 		+ '  <tr>'
@@ -45,6 +46,7 @@ function table2()
 {
 
 	var tableMainDiv = '<div class="well well-lg">'
+		+'<center class="tableheadingStyle">TABLE-2 (Actual readings)</center>'
         + '<table class="table table-bordered" >'
 		+ ' <thead>'
 		+ '  <tr>'
@@ -118,7 +120,7 @@ Highcharts.chart('canvas-div', {
 	exporting: { enabled: true },
 	credits: { enabled: false},
     chart: {
-        type: 'line'
+        type: 'scatter'
     },
     title: {
         text: 'Speed v/s Pulses'
@@ -159,7 +161,7 @@ Highcharts.chart('canvas-div', {
     series: [{
         name: 'Standard  ',
         data: graphData,  // First series data
-        color: '#50c7d9',
+        color: 'green',
         marker: {
             enabled: true,
             radius: 4,
@@ -168,7 +170,7 @@ Highcharts.chart('canvas-div', {
     }, {
         name: 'Observed ',
         data: graphData1,  // Second series data
-        color: '#8250d9',
+        color: 'red',
         marker: {
             enabled: true,
             radius: 4,

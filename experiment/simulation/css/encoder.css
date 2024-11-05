@@ -37,6 +37,36 @@ hr.new3 {
 			padding:5px 20px 5px 5px;
 			margin: 5px;
 }	
+.tableheadingStyle{
+	color: #337ab7;
+	font-size: 17px;
+	font-weight: bolder;
+	border-style: inherit;
+	margin: 15px;padding: 5px;
+}
+
+	
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .rpmimg {
+        margin-top: 87%;
+        float: right;
+        margin-right: -61%;
+        margin-left: -41%;
+    }
+}
+
+/* Style for large LED screens */
+@media (min-width: 1440px) {
+    .rpmimg {
+        margin-top: 87%;
+        float: right;
+        margin-right: -50%;
+        margin-left: -41%;
+    }
+}
+
+
 #testSubmit
 {
 	padding: 10px;
