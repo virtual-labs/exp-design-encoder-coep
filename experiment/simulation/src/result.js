@@ -363,7 +363,7 @@ function result(){
 	    series: [{
 	        name: '',
 	        data: [
-	            { name: 'Basic Knowledge', y: 200 },
+	            { name: 'Basic Knowledge', y: tempBasicKnowledge },
 	            { name: 'Configuration', y: tempCalPer },
 	            { name: 'Application', y: tempCalPer1 },
 	            { name: 'Mimic', y: 100 },
