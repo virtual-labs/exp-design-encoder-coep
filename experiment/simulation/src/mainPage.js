@@ -2,7 +2,7 @@
 
 var speed1=0;
 var noh=0;
-var ansCount=1;
+var ansCount=0;
 function config1(){
 	arrayJson=[];
 	masterJson={};
@@ -111,18 +111,23 @@ var htm='<div class="row" >'
 
 		
 		$("#speed").change(function(){
-			  $("#checkConfg").prop("disabled",false);
+			 
 			  noh= parseInt($("#noh").children(":selected").attr("value"));
 			  speed1=parseInt($("#speed").children(":selected").attr("value"));
 			  if(noh==0 || speed1==0)
 			  {
-			  	$("#validMaterialMsg").html("wrong Configuration.");
+			  	$("#validMaterialMsg").html("Wrong configuration.");
 			  	 console.log("hole"+noh);
 			  	 console.log("speed"+speed1);
 			  	$("#validMaterialMsg").prop("hidden",false);
 				
 			  	
 			  }
+			  else{
+					$("#validMaterialMsg").prop("hidden",true);
+				  $("#checkConfg").prop("disabled",false);
+			  }
+			  
 		  });
 		$("#noh").change(function(){
 			  $("#noh").prop("disabled",false);
@@ -130,12 +135,17 @@ var htm='<div class="row" >'
 			  speed1=parseInt($("#speed").children(":selected").attr("value"));
 			  if(noh==0)
 			  {
-			  	$("#validMaterialMsg").html("wrong Configuration.");
+			  	$("#validMaterialMsg").html("Wrong configuration.");
 			  	 console.log("hole"+noh);
 			  	console.log("speed"+speed1);
 			
 			  	$("#validMaterialMsg").prop("hidden",false);
 			  }
+			  else
+				  {
+				  $("#validMaterialMsg").prop("hidden",true);
+				  }
+			 
 		  });
 	   $("#checkConfg").click(function(){
 
@@ -149,13 +159,17 @@ var htm='<div class="row" >'
 		   $("#speed option[value="+speed1+"]").css("background-color","#dacecf");
 		   
 		   $("#speed option[value="+speed1+"]").attr("disabled",true);
-		  if(noh==0 || speed1==0)
+		  if(noh==0 )
 			  {
 			  	$("#validMaterialMsg").html("Select Number Of Holes.");
-			  	 console.log("hole"+noh);
-			
+			  	$("#checkConfg").prop("disabled",true);
 			  	$("#validMaterialMsg").prop("hidden",false);
 			  }
+		  else if(speed==0){
+			  $("#validMaterialMsg").html("Select speed RPM.");
+			  $("#checkConfg").prop("disabled",true);
+			  	$("#validMaterialMsg").prop("hidden",false);
+		  }
 		  else
 			  {
 //			  		mimic(value,noh);

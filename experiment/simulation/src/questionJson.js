@@ -6,38 +6,38 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "There are _____ types of optical encoder :",
+					"QC": "What type of light source is used in a photoelectric tachometer?",
 					"ANS": [{
 						"ANSID": false,
-						"content": "4"
+						"content": " Infrared"
 					}, {
 						"ANSID": false,
-						"content": "5"
+						"content": " Ultraviolet"
 					}, {
-						"ANSID": false,
-						"content": "3"
-					},{
 						"ANSID": true,
-						"content": "2 "
+						"content": " Laser"
+					},{
+						"ANSID": false,
+						"content": " Any visible light source"
 					}]
 				}]
 			}, {
 
 				"QUES": [{
 					
-					"QC": " Which of the following can be measured using tachometers?",
+					"QC": "Where is the opaque disc mounted in a photoelectric tachometer?",
 					"ANS": [{
+						"ANSID": false,
+						"content": " On the sensor"
+					}, {
+						"ANSID": false,
+						"content": " On the light source"
+					}, {
 						"ANSID": true,
-						"content": "Angular speed"
+						"content": " On the shaft whose speed is to be measured"
 					}, {
 						"ANSID": false,
-						"content": "Linear speed "
-					}, {
-						"ANSID": false,
-						"content": "Acceleration"
-					}, {
-						"ANSID": false,
-						"content": "Vibration"
+						"content": " Inside the electronic counter"
 					}]
 					
 				}]
@@ -45,21 +45,21 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "Which of the following types of speed is measured by a tachometer encoder?",
+					"QC": "What is the main function of the holes on the opaque disc in a photoelectric tachometer?",
 
 
 					"ANS": [{
 						"ANSID": true,
-						"content": "false pulses"
+						"content": " To allow light to pass through intermittently"
 					}, {
 						"ANSID": false,
-						"content": "single revolution in multiple track"
+						"content": " To provide weight balance for the disc"
 					}, {
 						"ANSID": false,
-						"content": "exact position of the motor shaft"
+						"content": " To increase speed of rotation"
 					}, {
 						"ANSID": false,
-						"content": "forward and reverse directions"
+						"content": " To store energy"
 					}]
 					
 				}]
@@ -67,19 +67,19 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "What are single output channel incremental encoders used for?",
+					"QC": "What happens when the opaque portion of the disc is aligned between the light source and the sensor?",
 					"ANS": [{
+						"ANSID": false,
+						"content": " A pulse is generated "
+					}, {
 						"ANSID": true,
-						"content": "Sense Speed (Tachometers) "
+						"content": " The output is zero"
 					}, {
 						"ANSID": false,
-						"content": "Position Feedback"
+						"content": " The sensor produces a continuous signal"
 					}, {
 						"ANSID": false,
-						"content": "Sense Direction"
-					}, {
-						"ANSID": false,
-						"content": "one of the above."
+						"content": "The disc stops rotating"
 					}]
 					
 				}]
@@ -87,21 +87,21 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "A tachometer encoder has ____",
+					"QC": "The pulse rate in a photoelectric tachometer depends on which two factors?",
 
 
 					"ANS": [{
 						"ANSID": false,
-						"content": "two outputs"
+						"content": " Number of holes and gating period"
 					}, {
 						"ANSID": false,
-						"content": "three outputs"
+						"content": " Speed of rotation and light intensity"
 					}, {
 						"ANSID": true,
-						"content": "one output"
+						"content": " Number of holes on the disc and speed of rotation"
 					}, {
 						"ANSID": false,
-						"content": "none of these"
+						"content": " Sensor sensitivity and gating period"
 					}]
 					
 				}]
@@ -109,19 +109,19 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "Which of the following is an Optical Encoder?",
+					"QC": "How is the rotational speed calculated in a photoelectric tachometer?",
 					"ANS": [{
 						"ANSID": false,
-						"content": "Actuator"
+						"content": " By counting the continuous signals"
+					}, {
+						"ANSID": false,
+						"content": " By using a timer"
 					}, {
 						"ANSID": true,
-						"content": "Transducer"
+						"content": " By measuring the frequency of pulses generated"
 					}, {
 						"ANSID": false,
-						"content": "Increases"
-					}, {
-						"ANSID": false,
-						"content": "Micro controller"
+						"content": " By observing light intensity variations"
 					}]
 					
 				}]

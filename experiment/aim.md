@@ -2,5 +2,7 @@
   Understand operation of encoder
   
 ### Objectives 
-- Understand operation of encoder  
-- Observe photoelectric tachometer output for speed variation
+- Understand working of photoelectric tachometer  
+- Configure tachometer for speed measurement
+- Application of photoelectric tachometer  
+- Observe standard and actual output

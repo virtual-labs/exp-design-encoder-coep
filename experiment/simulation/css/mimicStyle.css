@@ -5,7 +5,7 @@
             position: relative;
                margin-top: 76%;
             transform: translate(-50%, -50%);
-            background-color: lightgray;
+            background-color: transparent;
 /*             background-image: url('images/disc.png'); */
             overflow: hidden;
         }
@@ -33,7 +33,7 @@
         
     position: absolute;
     margin-top: 50px;
-    margin-left: -80px;
+    margin-left: -90px;
         
         
         }

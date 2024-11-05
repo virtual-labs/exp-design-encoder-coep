@@ -144,7 +144,7 @@ function result(){
 		+'<div class="row">'
 		
 		+'<div class="col-sm-12">'
-		+'<h6><center class="appTitle" style="background-color:#4b4242;font-weight: bold;">Calculated of pulses <b style=" font-weight: bold; color: #e0ce97;"></b></center></h6>'
+		+'<h6><center class="appTitle" style="background-color:#4b4242;font-weight: bold;">Pulses calculation <b style=" font-weight: bold; color: #e0ce97;"></b></center></h6>'
 		+'</div>'
 		
 		+'</div>'
@@ -199,7 +199,7 @@ function result(){
 		+'<h4><center class="appTitle" style="font-weight: bolder;" > <b style=" font-weight: 500; color: #e0ce97;">APPLICATION</b></center></h4>'
 		+'<div class="row">'
 		+'<div class="col-sm-12">'
-		+'<h6><center class="appTitle" style="background-color:#4b4242;font-weight: bolder;">Calculated accuracy (%) <b style=" font-weight: bold; color: #e0ce97;"></b></center></h6>'
+		+'<h6><center class="appTitle" style="background-color:#4b4242;font-weight: bolder;">accuracy (%) calculation <b style=" font-weight: bold; color: #e0ce97;"></b></center></h6>'
 		+'</div>'
 		
 		
@@ -286,7 +286,7 @@ function result(){
 			     +'  </div>'
 			     $("#basicKnowledge").html(str);
 			}
-		var congCounterTotal=parseInt(resultMasterJson.actual.actualPulsesCount);
+		var congCounterTotal=parseInt(resultMasterJson.std.stdPulsesCount);
 		var tempCalPer=parseInt((5/congCounterTotal)*100);
 		console.log("tempCalPer "+tempCalPer);
 		if(tempCalPer>=60){
@@ -305,7 +305,7 @@ function result(){
 			     +'  </div>'
 			     $("#config").html(str);
 			}
-		var appCounterTotal1=parseInt(resultMasterJson.std.stdPulsesCount);
+		var appCounterTotal1=parseInt(resultMasterJson.actual.actualPulsesCount);
 		var tempCalPer1=parseInt((5/appCounterTotal1)*100);
 		console.log("tempCalPer1 "+tempCalPer1);
 		if(tempCalPer1>=60){
@@ -327,6 +327,7 @@ function result(){
 
 	// Build the chart
 	Highcharts.chart('graphDiv', {
+		credits: { enabled: false},
 	    chart: {
 	        plotBackgroundColor: null,
 	        plotBorderWidth: null,

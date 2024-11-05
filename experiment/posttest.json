@@ -26,40 +26,40 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Which environmental factor can affect the performance of a photoelectric tachometer?",
+      "question": "Which type of sensor is commonly used in photoelectric tachometers?",
       "answers": {
-        "a": "Humidity",
-        "b": "Magnetic field",
-        "c": "Sound waves",
-        "d": "Static electricity"
+        "a": "Phototube or photosensitive semiconductor device",
+        "b": "Thermistor",
+        "c": "Strain gauge",
+        "d": " Pressure sensor"
       },
      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
 	{
-      "question": "What is the purpose of a feedback loop in a closed-loop photoelectric tachometer system?",
+      "question": "What determines the lifespan of the photoelectric tachometer's light source?",
       "answers": {
-        "a": "Increase power consumption",
-        "b": "Improve accuracy and stability",
-        "c": "Decrease sensitivity",
-        "d": "Disable the tachometer"
+        "a": "Number of holes in the disc",
+        "b": "Type of sensor used",
+        "c": "Continuous usage hours",
+        "d": "Output pulse rate"
       },
      
-      "correctAnswer": "b",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
 	
 	{
-      "question": "How does the color of the target object impact a photoelectric tachometer's performance?",
+      "question": "Why might a photoelectric tachometer be preferred in digital instrumentation systems?",
       "answers": {
-        "a": "No impact",
-        "b": "Increases sensitivity",
-        "c": "Decreases sensitivity",
-        "d": "Changes the light source"
+        "a": "Its cheaper than other tachometers",
+        "b": " It directly provides a digital output",
+        "c": " It has an analog-to-digital converter",
+        "d": " It does not require a power source"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   
