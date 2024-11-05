@@ -244,6 +244,7 @@ var flg =0;
 //    	}
     	
 			$("#light").prop("hidden",false);
+			 $('#light').addClass('blinking');
 			console.log(masterJson1);
 			$("#start").prop("disabled",true);	
 			$("#plus,#minus,#stop").prop("disabled",false);	
@@ -261,7 +262,7 @@ var flg =0;
 		
  	});	
 $("#stop").click(function(){
-	rotationSpeed=1;
+	rotationSpeed=0;
 	pulse=0;
 	$("#start").prop("disabled",false);
 		$("#plus,#minus").prop("disabled",true);
@@ -276,7 +277,7 @@ $("#stop").click(function(){
 		}
 		
  	});	
-	 let rotationSpeed = 1;  // Degrees per frame (controls speed)
+	 let rotationSpeed = 0;  // Degrees per frame (controls speed)
 	    let rotation = 0;       // Current rotation angle
 	    let lastTime = 0;
 	    let pulses = [];        // Stores pulse signal history
@@ -312,7 +313,7 @@ $("#stop").click(function(){
 	    
 	    $('#rpmImg').css('margin-top', '87%');
 	    $('#shaft').css('margin-top', '50%');
-	    $('#shaft').css('margin-left', '-19%');
+//	    $('#shaft').css('margin-left', '-19%');
 		    let rpmDisplay = document.getElementById('rpmValue');
 		    let disc = document.getElementById('disc');
 		    let pulseContainer = document.getElementById('pulseContainer');
@@ -362,35 +363,66 @@ $("#stop").click(function(){
 //		    	 
 //		    });
 		    $("#plus").click(function() {
+		    	 rpmValue = $('#rpmValue').text();
+		    	if(rpmValue<1000){
+		    		
+		    	
+		    		 rpmValue = parseInt(parseInt(rpmValue) + parseInt(100));
+					 console.log("rpmValue : "+rpmValue);
+					 
+				    	 rotationSpeed += rpmValue;  // Increase speed
+				    	 pulse=rpmValue*noh;
+				    	  ErrorAssign();
+				    	 $("#pulseValue").html(withError);
+				    	 $("#rpmValue").html(rpmValue);
+				    	 $("#reading,#minus").prop("disabled",false);	
+		    
+		    	}
+		    	else if(rpmValue==1000){
+		    		
+		    		$("#rpmValue").html(1000);
+		    		rpmValue=1000;
+					 console.log("rpmValue : "+rpmValue);
+					 
+				    	 rotationSpeed += rpmValue;  // Increase speed
+				    	 pulse=rpmValue*noh;
+				    	  ErrorAssign();
+				    	 $("#pulseValue").html(withError);
+				    	 $("#rpmValue").html(rpmValue);
+				    	 $("#reading,#minus").prop("disabled",false);	
+				    	 $("#plus").prop("disabled",true);
+		    	}
+		    	else{
+
+					$("#modelMsg").html("Maximum Speed is 1000");
+		    	}
+		    		
 				
-				 rpmValue = $('#rpmValue').text();
-				 rpmValue = parseInt(parseInt(rpmValue) + parseInt(100));
-				 console.log("rpmValue : "+rpmValue);
-				 
-			    	 rotationSpeed += rpmValue;  // Increase speed
-			    	 pulse=rpmValue*noh;
-			    	  ErrorAssign();
-			    	 $("#pulseValue").html(withError);
-			    	 $("#rpmValue").html(rpmValue);
-			    	 $("#reading").prop("disabled",false);	
 			    	 
 			    });
 			    $("#minus").click(function() {
-			    	
-			    	if(rpmValue<=0){
-			    		 $("#rpmValue").html("0");
+			    	rpmValue = $('#rpmValue').text();
+			    	if(rpmValue==0){
+			    		rpmValue=0;
+			    		rotationSpeed =0 ;
+			    		$("#rpmValue").html(0);
+			    		 $("#minus").prop("disabled",true);
+			    		 $("#plus").prop("disabled",false);
 			    	}
-				 rpmValue = $('#rpmValue').text();
-				 rpmValue = parseInt(parseInt(rpmValue) - parseInt(100));
-				console.log("rpmValue : "+rpmValue);
-//			    	   rotationSpeed = Math.max(0, rotationSpeed - rpmValue);  // Decrease speed but not below 0
-						rotationSpeed -= rpmValue;
-						
-			    	   pulse=rpmValue*noh;
-			    	   ErrorAssign();
-				    	 $("#pulseValue").html(withError);  
-				    	 $("#rpmValue").html(rpmValue);
-				    	 $("#reading").prop("disabled",false);	
+			    	else{
+			    		
+						 rpmValue = parseInt(parseInt(rpmValue) - parseInt(100));
+						console.log("rpmValue : "+rpmValue);
+//					    	   rotationSpeed = Math.max(0, rotationSpeed - rpmValue);  // Decrease speed but not below 0
+								rotationSpeed -= rpmValue;
+								
+					    	   pulse=rpmValue*noh;
+					    	   ErrorAssign();
+						    	 $("#pulseValue").html(withError);  
+						    	 $("#rpmValue").html(rpmValue);
+						    	 $("#reading,#plus").prop("disabled",false);	
+			    	}
+				 
 			    });
 
 			     // Start the animation			

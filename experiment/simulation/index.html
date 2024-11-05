@@ -22,6 +22,56 @@
 <link rel="stylesheet" href="css/result.css">
 </head>
 <style>
+.button1 {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 15px;
+ padding: 5px 10px; 
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 20px #FF0000; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+@keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    /* Blinking class */
+    .blinking {
+        animation: blink 1s infinite;
+    }
 .blink {
             animation: blinker 1.5s linear infinite;
             color: red;
@@ -61,10 +111,10 @@
 	 </div>
 	
 	 <div  class="col-sm-1">
-	<button class="btn btn-danger" id="procedure" data-toggle="modal" data-target="#myModalRow">PROCEDURE</button>
+	<button class="btn btn-danger button1" id="procedure" data-toggle="modal" data-target="#myModalRow">PROCEDURE</button>
 	 </div>
 	 <div  class="col-sm-1">
-	<button class="btn btn-success" id="result" hidden>RESULT</button>
+	<button class="btn btn-danger" id="result" hidden>RESULT</button>
 	 </div>
 	 <div  class="col-sm-2">
 	<button class="btn btn-danger" id="saveAsJpg" hidden>DOWNLOAD RESULT</button>
@@ -80,12 +130,12 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Procedure</h4>
+        <h4 class="modal-title">PROCEDURE </h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
-      <div class="modal-body" >
+      <div class="modal-body" style="color:#682624;">
       Attempt all question<br/>
        Step 1 : Select number of holes on the disc<br>
        Step 2 : Select speed from drop down menu<br> 
@@ -190,15 +240,15 @@
 					<div class="row" >
 					
 						<div class="col-sm-2" >
-						<img src="images/RPM.png" id="rpmImg" class="img-responsive">
+						<img src="images/RPM.png" id="rpmImg" class="img-responsive rpmimg"  >
 						</div>
 						
 						<div class="col-sm-4" >
-						<img src="images/shaft1.png" id="shaft" class="img-responsive">
+						<img src="images/shaft1.png" id="shaft"  class="img-responsive">
 	<!-- 					<span class="indicator" ></span>  -->
 						</div>
 					   <div class="col-sm-3" >
-					   	<img  src="images/light12.PNG" id="light" class="img-responsive" hidden></img>
+					   	<img  src="images/light12.PNG" id="light" class="img-responsive"  hidden></img>
 						<img  id="disc" class="img-responsive"></img>
 						</div>
 						<div class="col-sm-2" id="pulseDiv" >
