@@ -10,7 +10,7 @@ function tableCreate1(masterJson1)
 				+ '  <tr>'
 				+ '   <th scope="col"><center>Number of Holes</center></th>'
 				+ '  <th scope="col"><center>Speed (RPM)</center></th>'
-				+ '  <th scope="col"><center>Pulse</center></th>'
+				+ '  <th scope="col"><center>Pulses</center></th>'
 
 				+ '   </tr>'
 				+ '  </thead>'
