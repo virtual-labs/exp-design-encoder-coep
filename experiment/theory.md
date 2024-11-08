@@ -19,7 +19,7 @@ This method of measuring speed of rotation consists of mounting an opaque disc o
 ![*Turbine_constr2*](images/encoder.png)
 
 The disc has a number of equidistant holes on its periphery. At one side of the disc a light source is fixed and at the other side of the disc, and on line with the light source, a light sensor such as a photo tube or some photosensitive semi-conducting device is placed. When the opaque portion of the disc is between the light source and the light sensor, the latter is unilluminated and produces no output. But when a hole appears between the two, the light falling upon the sensor produces an output pulse.
-he frequency at which these pulses are produced depends upon the number of holes in the disc and its speed of rotation. Since the number of holes is fixed,the pulse rate is a function of speed of rotation. The pulse rate can be measured by an electronic counter pich can be directly calibrated in terms of speed in rpm.
+The frequency at which these pulses are produced depends upon the number of holes in the disc and its speed of rotation. Since the number of holes is fixed,the pulse rate is a function of speed of rotation. The pulse rate can be measured by an electronic counter pich can be directly calibrated in terms of speed in rpm.
 
 PULSES = SPEED * NUMBER OF HOLES
 

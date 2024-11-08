@@ -21,7 +21,7 @@ var htm='<div class="row" >'
 	   
 	   +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf"  id="noh" style="height:auto;" >'
-	   +'<option value="0">--- Select disc type --- </option>'
+	   +'<option value="0">--- Select Number of holes on the disc --- </option>'
 	   +'<option value="2" >2  </option>'
 	   +'<option value="4" >4  </option>'
 	   +'<option value="8" >8  </option>'
