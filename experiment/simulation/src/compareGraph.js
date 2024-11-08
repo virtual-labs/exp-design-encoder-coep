@@ -1,7 +1,7 @@
 
 function compareGraph()		
 {
-			$("#procedure").prop("hidden",true);
+			$("#procedure,#simDemo").prop("hidden",true);
 		$("#result").prop("hidden",false);
 //		alert("GRAPH");
 		$("#centerText1").html("READINGS  ");
@@ -24,7 +24,7 @@ function table1()
 		+ '  <tr>'
 //		+ '   <th scope="col"><center>Number of Holes</center></th>'
 		+ '  <th scope="col"><center>Speed (RPM)</center></th>'
-		+ '  <th scope="col"><center>Pulse</center></th>'
+		+ '  <th scope="col"><center>Pulses</center></th>'
 
 		+ '   </tr>'
 		+ '  </thead>'
@@ -52,7 +52,7 @@ function table2()
 		+ '  <tr>'
 //		+ '   <th scope="col"><center>Number of Holes</center></th>'
 		+ '  <th scope="col"><center>Speed (RPM)</center></th>'
-		+ '  <th scope="col"><center>Pulse</center></th>'
+		+ '  <th scope="col"><center>Pulses</center></th>'
 
 		+ '   </tr>'
 		+ '  </thead>'
