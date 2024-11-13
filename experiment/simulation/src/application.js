@@ -2,6 +2,11 @@ var ansCountA=1;
 masterJson1={};
 var arrJson1=[];
 function application(){
+	
+	$("#tableDesign").prop("hidden", true);
+	$("#stdTable").prop("hidden", true);
+	$("#actualTable").prop("hidden", true);
+	
 	var htm=''
 		+'<div class="row">'
 		 +'<div class="col-sm-1">'
@@ -39,8 +44,7 @@ function application(){
 	       +'<br><button type="submit" class="btn btn-danger" id="btnAnsCheck1" style="width:100%;margin-top: -6px;" data-toggle="modal" data-target="#myModal2" >Submit</button>'
 	       +'</div>'
 	       +'</div>'
-	       +'<br>'
-	       +'<br>'
+	      
 	       + ' <!-- Modal -->'
 			+ '<div class="modal fade" id="myModal2" role="dialog">'
 			+ ' <div class="modal-dialog modal-md">'

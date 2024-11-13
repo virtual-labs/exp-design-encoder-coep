@@ -4,6 +4,10 @@ var speed1=0;
 var noh=0;
 var ansCount=0;
 function config1(){
+	
+	$("#canvas-div").html('<img src="images/mainPage.png" style="margin-top:20px" class="img-fluid" >');
+	$("#centerText2").html("DIAGRAM");
+	
 	arrayJson=[];
 	masterJson={};
 //	tempJson = {};	
@@ -53,8 +57,7 @@ var htm='<div class="row" >'
 	   +'</div>'
 	  
 	   +'</div>'
-	  +'<br>'
-	  +'<br>'
+	  
 	   +'<div class="row">'
 	   +'<div class="col-sm-6">'
 //	   +'<label for="meter">Select Arm length (mm) </label>'
@@ -85,8 +88,7 @@ var htm='<div class="row" >'
 	       +'<br><button type="submit" class="btn btn-danger" id="btnAnsCheck" style="width:100%;margin-top: -6px;" data-toggle="modal" data-target="#myModal" >Submit</button>'
 	       +'</div>'
 	       +'</div>'
-	       +'<br>'
-	       +'<br>'
+	     
 	       + ' <!-- Modal -->'
 			+ '<div class="modal fade" id="myModal" role="dialog">'
 			+ ' <div class="modal-dialog modal-md">'

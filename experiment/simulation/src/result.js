@@ -20,7 +20,7 @@ function result(){
 		+'</div>'
 		+'<div class="col-sm-6 " style="">'
 		+'<span>'
-		+'<h6><center style="font-weight: bold;border-style: dashed;" class="blink">Experiment Completed successfully</center></h6>'
+		+'<h6><center style="font-weight: bold;border-style: dashed;" class="blink">Experiment completed successfully</center></h6>'
 //		+'<br><h6><center style="font-weight: bold;">Experiment completed .</center></h6>'
 		+'</span>'
 		+'</div>'
@@ -257,7 +257,7 @@ function result(){
 		        $("canvas").css("display","none");
 		        // Optionally save the screenshot as an image
 		        var link = document.createElement('a');
-		        link.download = 'screenshot.png';
+		        link.download = 'Encoder_report.png';
 		        link.href = canvas.toDataURL();
 		        link.click();
 		    });
