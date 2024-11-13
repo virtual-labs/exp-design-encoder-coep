@@ -71,7 +71,7 @@
 				
 		
 
-			$("#main-div-conf").html(questions);
+			$("#canvas-div").html(questions);
 
 
 			var flg = false;
@@ -117,7 +117,7 @@
 //					 
 //						 $("#modelMsg").html("<b class='boldTextGreen'>Test Submitted Successfully ");
 
-						$("#modelMsg").html("<b class='boldTextGreen'>Test Submitted Successfully . Correct Answers Are : " + ansCount + "</b>");
+						$("#modelMsg").html("<b class='boldTextGreen'>Test submitted successfully .<br/> Correct answers are : " + ansCount + "</b>");
 						flg = true;
 						$("body").css("padding","0px 0px 0px 0px");
 						$("#centerText1").html("CONFIGURATION");
