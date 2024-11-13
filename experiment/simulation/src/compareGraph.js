@@ -1,6 +1,9 @@
 
 function compareGraph()		
 {
+	$("#tableDesign").prop("hidden", false);
+	$("#stdTable").prop("hidden", false);
+	$("#actualTable").prop("hidden", false);
 			$("#procedure,#simDemo").prop("hidden",true);
 		$("#result").prop("hidden",false);
 //		alert("GRAPH");
@@ -72,7 +75,7 @@ function table2()
 }
 function graph1()
 {
-
+		$("#canvas-div").css("margin-top","20px");
 	  var xdata = [];
 	    var ydata = []; // in kg/m³
 var graphData=[];
@@ -177,6 +180,15 @@ Highcharts.chart('canvas-div', {
             symbol: 'circle'
         }
     }]
+});
+htm='<div class="row " >'
+	+'<div  class="col-sm-12" >   '   
+	+'<button class="btn btn-danger btnStyle" id="result" ><b> Result</b></button>'
+	+'</div>'
+	+'</div>'
+	$("#canvas-div").append(htm);
+	$("#result").click(function(){
+	result();
 });
 }
 //function graph2()

@@ -98,7 +98,7 @@
 	</header>
 	<div class="row container-fluid" >
 	<div  class="col-sm-12" >      
-	<button class="btn btn-danger btn1" id="result" hidden><b> Result</b></button>
+	
 	<button class="btn btn-danger btn1" id="saveAsJpg" hidden><b>Download result</b></button>
 	 <button type="button" id="simDemo" class="btn btn-danger btn1" data-toggle="modal" data-target="#readProcedureModal1" ><b>Simulation Demo</b> </button>
 	<button class="btn btn-danger button1 btn1" id="procedure" data-toggle="modal" data-target="#myModalRow"><b>Procedure</b></button>
@@ -193,13 +193,13 @@
     
       </div>
 <div  class="row container-fluid" id="main-div1" style="margin-top: -24px;">
-	<div class="col-lg-6" id="main-div" >
+	<div class="col-lg-6" id="main-div" style="font-family: Verdana, sans-serif;margin-bottom: 20px;">
 				<div class="panel panel-primary">
-	      			<div class="panel-heading " id="panelHeading1"><center id="centerText1" class="panelHeadingBold">BASIC KNOWLEDGE </center>
+	      			<div class="panel-heading " id="panelHeading1"><center id="centerText1" class="panelHeadingBold"> DIAGRAM </center>
 	      			</div>
 	      			
 	     			<div class="panel-body" id="main-div-conf" >
-	     			
+	     			<img src="images/mainPage.png" style="margin-top:20px" class="img-fluid" >
 	     			</div>
 	      			<div class="panel-body" id="tableDesign">
 	      			
@@ -223,11 +223,11 @@
 	   
 			<div class="col-lg-6" id="canvas">
 	             <div class="panel panel-primary" >
-	      			<div class="panel-heading " id="panelHeading2" ><center id="centerText2" class="panelHeadingBold"> DIAGRAM</center>
+	      			<div class="panel-heading " id="panelHeading2" ><center id="centerText2" class="panelHeadingBold">BASIC KNOWLEDGE</center>
 	      			</div>
 	      			
 	      			<div class="panel-body" id="canvas-div" style="margin-top: -21px;">
-	      			<img src="images/mainPage.png" style="margin-top:20px" class="img-fluid" >
+	      			
 	      			
 	      			</div>
 	      			<div class="panel-body" id='action'>
@@ -298,7 +298,7 @@
 	      		</div>
 	       </div>
 	</div>
-	<div  class="container-fluid resultMainPage" id="main-divResult" style="margin-bottom:60px;" hidden>
+	<div  class="container-fluid resultMainPage" id="main-divResult" style="margin-bottom:60px;margin-top:30px" hidden>
 
 	</div>
 	<footer>
@@ -343,9 +343,7 @@ $(document).ready(function() {
     
 });
 
-$("#result").click(function(){
-	result();
-});
+
 
 function isAlphabetical(input) {
     return /^[A-Za-z]+$/.test(input);
