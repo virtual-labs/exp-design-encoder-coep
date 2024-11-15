@@ -1,10 +1,5 @@
 function mimic( value, noh,totalPulse) {
 	
-	
-	
-	
-	
-	
 ////	var paper = new Raphael(document.getElementById('canvas-div'), 1000, 1000);
 //	$('#canvas-div').html("");
 //    $('#canvas-div').removeAttr('width');

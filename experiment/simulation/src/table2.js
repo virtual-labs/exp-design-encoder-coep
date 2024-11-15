@@ -2,7 +2,7 @@
 function tableCreate1(masterJson1)		
 {
 
-			console.log(masterJson1);
+		//	console.log(masterJson1);
 
 			var tableMainDiv = '<div class="well well-lg">'
 		        + '<table class="table table-bordered" >'
@@ -27,7 +27,7 @@ function tableCreate1(masterJson1)
 				 + ' </div>'
 				 +'<div class="row" id="nextLevelDiv1" hidden>'
 				 +'<div class="col-sm-12">'
-				 +'<button type="submit" class="btn btn-danger" id="nextLevel2" style="width:100%;margin-top: -6px;" data-toggle="modal" data-target="#myModal" >GO TO NEXT LEVEL</button>'
+				 +'<button type="submit" class="btn btn-danger" id="nextLevel2" style="width:100%;margin-top: -6px; margin-bottom:20px;" data-toggle="modal" data-target="#myModal" >GO TO NEXT LEVEL</button>'
 				  +'</div>'
 				 +'</div>'
 				 
