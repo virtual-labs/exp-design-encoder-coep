@@ -199,7 +199,7 @@ function result(){
 		+'<h4><center class="appTitle" style="font-weight: bolder;" > <b style=" font-weight: 500; color: #e0ce97;">APPLICATION</b></center></h4>'
 		+'<div class="row">'
 		+'<div class="col-sm-12">'
-		+'<h6><center class="appTitle" style="background-color:#4b4242;font-weight: bolder;">accuracy (%) calculation <b style=" font-weight: bold; color: #e0ce97;"></b></center></h6>'
+		+'<h6><center class="appTitle" style="background-color:#4b4242;font-weight: bolder;">Accuracy (%) calculation <b style=" font-weight: bold; color: #e0ce97;"></b></center></h6>'
 		+'</div>'
 		
 		
@@ -267,7 +267,7 @@ function result(){
 //		console.log(resultMasterJson.question.correctQuestion);
 		CorrectAnswer=parseInt(resultMasterJson.question.correctQuestion);
 		var tempBasicKnowledge=parseInt((CorrectAnswer/6)*100);
-		console.log("temp "+tempBasicKnowledge);
+	//	console.log("temp "+tempBasicKnowledge);
 		
 		
 		if(tempBasicKnowledge>=60){
@@ -288,7 +288,7 @@ function result(){
 			}
 		var congCounterTotal=parseInt(resultMasterJson.std.stdPulsesCount);
 		var tempCalPer=parseInt((5/congCounterTotal)*100);
-		console.log("tempCalPer "+tempCalPer);
+	//	console.log("tempCalPer "+tempCalPer);
 		if(tempCalPer>=60){
 			 var str=''
 				 +' <div class="alert alert-success attainedText">'
@@ -307,7 +307,7 @@ function result(){
 			}
 		var appCounterTotal1=parseInt(resultMasterJson.actual.actualPulsesCount);
 		var tempCalPer1=parseInt((5/appCounterTotal1)*100);
-		console.log("tempCalPer1 "+tempCalPer1);
+	//	console.log("tempCalPer1 "+tempCalPer1);
 		if(tempCalPer1>=60){
 			 var str=''
 				 +' <div class="alert alert-success attainedText">'

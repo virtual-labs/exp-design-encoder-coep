@@ -21,10 +21,10 @@
 	font-size:17px;
 }
 .validMaterialMsgStyle{
-	color: #fff;
+	color:red;
     font-size: 19px;
     padding: 10px;
-    background-color:#ee4c4c;
+  
         border-radius: 16px
 }
 hr.new3 {

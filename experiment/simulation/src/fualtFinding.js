@@ -16,7 +16,7 @@ function tableCreateForFualtFinding1()
 					+ '   <tbody>'
 				for (var i = 0,p=0; i < masterJson.demo.length; i++,p++) {
 					var errorRandom=Math.random() * (max - min) + min;
-					console.log("errorRandom   "+errorRandom);
+				//	console.log("errorRandom   "+errorRandom);
 					var errorAddFault=errorRandom+masterJson.demo[i].rFlow;
 					tableMainDiv += '<tr>'
 						+ '   <td><center>' + masterJson.demo[i].perc + '</center></td>'
@@ -36,7 +36,7 @@ function tableCreateForFualtFinding1()
 				var min = 2;
 				 var max = masterJson.demo.length-1;
 				 var place=parseInt(Math.random() * (max - min) + min);
-				 console.log("Place Continue  "+place);
+				// console.log("Place Continue  "+place);
 				
 				var tableMainDiv = '<h2><center>OBSERVE THE TABLE READING & SELECT THE FAULT</center></h2>'
 			        + '<table class="table table-bordered" >'
@@ -94,7 +94,7 @@ function fualtFinding()
 	 $("#panelHeadingBold").html(""); 
 	  randomNumber=Math.floor(Math.random() * 2);
 //	 randomNumber=1;
-	 console.log("random  "+randomNumber);
+//	 console.log("random  "+randomNumber);
 	var str=''
 	str+='<div class="row ">'
 //			+'<button type="button" class="col-sm-12 btn btn-danger" style="margin-top:20px;" id="nextFaultFinding"disabled>Next Level</button>'
@@ -130,18 +130,18 @@ function fualtFinding()
 	
     $("#errorSelection").change(function() {
     	var selectedOption=$("#errorSelection").val();
-    	console.log("selectedOption   "+selectedOption);
+    //	console.log("selectedOption   "+selectedOption);
 //    	if(counter<=3){
     		if( randomNumber==selectedOption){
     			$("#main-div-conf").html("");
     			 $("#canvas-div").html("");
     			 $("#alertMsgBox").attr('hidden',true);
     			 //resultAnalysis();
-    			 $("#main-div1").html("<b class='errorMsgf col-sm-12 '> Result Page inprogress .</b>");
+    			 $("#main-div1").html("<b class='errorMsgf col-sm-12 '> Result page in progress.</b>");
     		}
     		else{
     			$("#alertMsgBox").attr('hidden',false);
-    			$("#msgBox").html("<b class='errorMsgf'> Wrong selection . </b>");	
+    			$("#msgBox").html("<b class='errorMsgf'> Wrong selection. </b>");	
     			}
 //    	}
 //    	else{

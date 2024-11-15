@@ -20,12 +20,12 @@ dataJson = {};
 var wrongCounter=0;
 var htm='<div class="row" >'
 		+'<div class="col-sm-6">'
-	   +'<label class="labelstyle">Select Number of holes on the disc</label>'
+	   +'<label class="labelstyle">Select number of holes on the disc</label>'
 	   +'</div>'
 	   
 	   +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf"  id="noh" style="height:auto;" >'
-	   +'<option value="0">--- Select Number of holes on the disc --- </option>'
+	   +'<option value="0">--- Select number of holes on the disc --- </option>'
 	   +'<option value="2" >2  </option>'
 	   +'<option value="4" >4  </option>'
 	   +'<option value="8" >8  </option>'
@@ -42,7 +42,7 @@ var htm='<div class="row" >'
 	   +'</div>'
 	   +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf"  id="speed" style="height:auto;" >'
-	   +'<option value="0">--- Select Speed in RPM --- </option>'
+	   +'<option value="0">--- Select speed in RPM --- </option>'
 	   +'<option value="100" >100  </option>'
 	   +'<option value="200" >200  </option>'
 	   +'<option value="300" >300  </option>'
@@ -119,8 +119,8 @@ var htm='<div class="row" >'
 			  if(noh==0 || speed1==0)
 			  {
 			  	$("#validMaterialMsg").html("Wrong configuration.");
-			  	 console.log("hole"+noh);
-			  	 console.log("speed"+speed1);
+			 // 	 console.log("hole"+noh);
+			//  	 console.log("speed"+speed1);
 			  	$("#validMaterialMsg").prop("hidden",false);
 				
 			  	
@@ -138,8 +138,8 @@ var htm='<div class="row" >'
 			  if(noh==0)
 			  {
 			  	$("#validMaterialMsg").html("Wrong configuration.");
-			  	 console.log("hole"+noh);
-			  	console.log("speed"+speed1);
+			 // 	 console.log("hole"+noh);
+			 // 	console.log("speed"+speed1);
 			
 			  	$("#validMaterialMsg").prop("hidden",false);
 			  }
@@ -155,7 +155,7 @@ var htm='<div class="row" >'
 			$("body").css("padding","0px 0px 0px 0px");
 		   $("#noh,#speed").prop("disabled",true);
 		  noh= parseInt($("#noh").val());
-		  console.log("hole"+noh);
+		//  console.log("hole"+noh);
 		
 		  speed1=parseInt($("#speed").children(":selected").attr("value"));
 		   $("#speed option[value="+speed1+"]").css("background-color","#dacecf");
@@ -163,7 +163,7 @@ var htm='<div class="row" >'
 		   $("#speed option[value="+speed1+"]").attr("disabled",true);
 		  if(noh==0 )
 			  {
-			  	$("#validMaterialMsg").html("Select Number Of Holes.");
+			  	$("#validMaterialMsg").html("Select number of holes.");
 			  	$("#checkConfg").prop("disabled",true);
 			  	$("#validMaterialMsg").prop("hidden",false);
 			  }
@@ -185,12 +185,12 @@ var htm='<div class="row" >'
 				$("body").css("padding","0px 0px 0px 0px");
 			   var flowAns = $("#flowAns").val();
 			  
-				console.log("ans check"+flowAns);
+			//	console.log("ans check"+flowAns);
 				flow=speed1*noh;
 
 				if(flowAns=="" || isAlphabetical(flowAns)){
 					
-					$("#modelMsg").html("Enter numeric value ");
+					$("#modelMsg").html("Enter numeric value");
 					
 				}
 				else
@@ -200,7 +200,7 @@ var htm='<div class="row" >'
 							
 							
 							 $("#modelMsg").css("color", "#a94442");
-							$("#modelMsg").html("Change the Speed and take  next reading .   ");
+							$("#modelMsg").html("Change the speed and take next reading.");
 							
 							$("#CalculateActualFlow").prop("hidden",true);
 							$("#checkConfg").prop("hidden",false);	
@@ -213,14 +213,14 @@ var htm='<div class="row" >'
 						} else if (flowAns != flow) {
 							
 							 $("#modelMsg").css("color", "red");
-						$("#modelMsg").html("<b>Entered value is incorrect.Try again .</b> ");
+						$("#modelMsg").html("<b>Entered value is incorrect. Try again.</b>");
 						
 						}
 
 
 					} else if (id == 4) {
 						 $("#modelMsg").css("color", "#a94442");
-						$("#modelMsg").html("<b>FORMULA : PULSES = SPEED * NUMBER OF HOLES</b>  ");
+						$("#modelMsg").html("<b>FORMULA : <br>PULSES = SPEED * NUMBER OF HOLES</b>");
 						
 					} else {
 						flowAns = $("#flowAns").val();
@@ -229,7 +229,7 @@ var htm='<div class="row" >'
 							
 							
 							$("#modelMsg").css("color", "#a94442");
-							$("#modelMsg").html("<b>Change the Speed and take  next reading . </b> ");
+							$("#modelMsg").html("<b>Change the speed and take next reading.</b>");
 							$("#CalculateActualFlow").prop("hidden",true);
 							$("#checkConfg").prop("hidden",false);
 							$("#speed").prop("disabled",false);
@@ -256,12 +256,12 @@ var htm='<div class="row" >'
 						tempJson.flow = flow;
 						arrayJson.push(tempJson);
 						masterJson.demo = arrayJson;
-						console.log(masterJson);
+						//console.log(masterJson);
 						tableCreate(masterJson);
 						tempJson={};
 						tempJson.stdPulsesCount=ansCount;
 						resultMasterJson.std=tempJson;
-						console.log(resultMasterJson);
+						//console.log(resultMasterJson);
 					}
 				});
 //	   }

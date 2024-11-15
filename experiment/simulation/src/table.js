@@ -2,7 +2,7 @@
 function tableCreate(masterJson)		
 {
 
-			console.log(masterJson);
+			//console.log(masterJson);
 
 			var tableMainDiv = '<div class="well well-lg">'
 		        + '<table class="table table-bordered" >'
@@ -41,7 +41,7 @@ function tableCreate(masterJson)
 				}
 			   $("#nextLevel").click(function(){
 				   $("#main-div-conf,#canvas-div,#tableDesign").html("");
-				   $("#centerText1").html("APPLICATION");
+				   $("#centerText1").html("READINGS");
 				   $("#centerText2").html("MIMIC");
 				   if(noh==2){
 					    $('#disc').attr('src', 'images/disc2r.png');

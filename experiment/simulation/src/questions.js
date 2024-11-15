@@ -125,7 +125,7 @@
 						tempJson={};
 						tempJson.correctQuestion=ansCount;
 						resultMasterJson.question=tempJson;
-						console.log(resultMasterJson);
+						//console.log(resultMasterJson);
 		   					
 					}
 
