@@ -7,8 +7,8 @@ function compareGraph()
 			$("#procedure,#simDemo").prop("hidden",true);
 		$("#result").prop("hidden",false);
 //		alert("GRAPH");
-		$("#centerText1").html("READINGS  ");
-		$("#centerText2").html("OBSERVATION");
+		$("#centerText1").html("READINGS");
+		$("#centerText2").html("GRAPH");
 		table1();
 		
 		table2();
@@ -141,7 +141,7 @@ Highcharts.chart('canvas-div', {
     },
     tooltip: {
       formatter: function () {
-          return `<b>${this.series.name}</b><br/>Speed: ${Highcharts.numberFormat(this.x, 2)}<br/>Pulses: ${Highcharts.numberFormat(this.y, 2)}`;
+          return `<b>${this.series.name}</b><br/>Speed: ${Highcharts.numberFormat(this.x, 2)}<br/>Pulses: ${Highcharts.numberFormat(this.y)}`;
       }
   },
     plotOptions: {
@@ -156,11 +156,7 @@ Highcharts.chart('canvas-div', {
             }
         }
     },
-    tooltip: {
-        enabled: true,
-        shared: true,
-        valueDecimals: 2
-    },
+   
     series: [{
         name: 'Standard  ',
         data: graphData,  // First series data

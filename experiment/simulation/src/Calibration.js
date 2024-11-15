@@ -126,23 +126,23 @@ function calibration()
 			});
 			var id=0;
 			$("#zeroSubmit").click(function() {
-				console.log("in zero submit");
+				//console.log("in zero submit");
 				
 				
 				var flowAns = $("#zeroText").val().trim();
 				var max=masterJson.demo[0].mFlow;
 				var min=masterJson.demo[0].rFlow;
 				var ans=min-max;
-				console.log("min    "+min);
+			//	console.log("min    "+min);
 				var ans1=ans.toFixed(2);
 				
-				console.log("zero Answer   "+ans1);
+			//	console.log("zero Answer   "+ans1);
 				
 				
 				if(flowAns=="")
 					{
 
-						 $("#modelMsgZero").html("<b class='boldTextBlue' >Dont Skip empty textbox . </b>");
+						 $("#modelMsgZero").html("<b class='boldTextBlue' >Dont skip empty textbox.</b>");
 						 $("body").css("padding","0px 0px 0px 0px");
 					}
 				else{
@@ -159,13 +159,13 @@ function calibration()
 								}
 								else if (flowAns != ans1) {
 								
-								 $("#modelMsgZero").html("<b class='boldTextRed'>Entered value is incorrect.Try again . </b>");
+								 $("#modelMsgZero").html("<b class='boldTextRed'>Entered value is incorrect. Try again. </b>");
 								 $("body").css("padding","0px 0px 0px 0px");
 								 dataJson = {};
 								 incorrectActualInstFlow++;
 								 dataJson.incorrectActualInstFlow =incorrectActualInstFlow ;
 								  data.ActualInstFlow = dataJson;
-								  console.log(data);
+								//  console.log(data);
 								
 								}
 
@@ -203,16 +203,16 @@ function calibration()
 			var id=0;
 			$("#spanSubmit").click(function() {
 				
-				console.log("in span submit");
+				//console.log("in span submit");
 				var max=masterJson.demo[length].mFlow;
 				var min=masterJson.demo[length].rFlow;
 				var ans=min-max;
-				console.log("min    "+min);
+				//console.log("min    "+min);
 				var ans1=ans.toFixed(2);
-				console.log("span Answer   "+ans1);
+				//console.log("span Answer   "+ans1);
 				
 				var flowAns = $("#spanText").val().trim();
-				console.log("flowAns Answer   "+flowAns);
+			//	console.log("flowAns Answer   "+flowAns);
 				if(flowAns=="")
 					{
 
@@ -242,7 +242,7 @@ function calibration()
 									 dataJson.incorrectActualInstFlow =incorrectActualInstFlow ;
 									  data.ActualInstFlow = dataJson;
 									
-									  console.log(data);
+									//  console.log(data);
 					
 					}
 
@@ -289,8 +289,8 @@ function calibration()
 				var temp2=masterJson.demo[0].mFlow;
 				var actual=parseInt(temp1);
 				var std=parseInt(temp2);
-				 console.log("masterJson.demo[0].rFlow"+masterJson.demo[0].rFlow);
-				 console.log("std "+std+" actual "+actual);
+				// console.log("masterJson.demo[0].rFlow"+masterJson.demo[0].rFlow);
+				// console.log("std "+std+" actual "+actual);
 				 for(i=0;i< masterJson.demo.length;i++){
 						
 							 if(std==actual)
@@ -328,7 +328,7 @@ function calibration()
 				var temp2=masterJson.demo[0].mFlow;
 				var actual=parseInt(temp1);
 				var std=parseInt(temp2);
-				 console.log("std "+std+" actual "+actual);
+				// console.log("std "+std+" actual "+actual);
 				
 				 
 				 
@@ -374,7 +374,7 @@ function calibration()
 				var actualSpan=parseInt(masterJson.demo[length].rFlow);
 				var stdSpan=parseInt(masterJson.demo[length].mFlow);
 
-				 console.log("std "+stdSpan+" actual "+actualSpan);
+				// console.log("std "+stdSpan+" actual "+actualSpan);
 				
 				 
 				 
@@ -433,7 +433,7 @@ function calibration()
 						var actualSpan =parseInt(masterJson.demo[0].rFlow);
 						var stdSpan=parseInt(masterJson.demo[0].mFlow);
 
-						 console.log(" span std "+stdSpan+" actual "+actualSpan);
+						// console.log(" span std "+stdSpan+" actual "+actualSpan);
 						
 						 
 						 
@@ -537,7 +537,7 @@ function calibration()
 				
 				var actualSpan=parseInt(temp1);
 				var stdSpan=parseInt(temp2);
-				 console.log(" span std "+stdSpan+" actual "+actualSpan);
+				// console.log(" span std "+stdSpan+" actual "+actualSpan);
 				
 				 
 				 

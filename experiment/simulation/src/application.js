@@ -109,21 +109,21 @@ function application(){
  	       randomNumber = Math.random() * (max - min) + min;
 
  		randomNumber1=randomNumber;
- 		console.log(randomNumber1);
+ 		//console.log(randomNumber1);
  		
  		addMinusValue = Math.floor(Math.random() * 2) + 1;
  	
- 		console.log(addMinusValue);
+ 		//console.log(addMinusValue);
  		 var perValue=(pulse1*(randomNumber1/100)).toFixed(2);
  		perValue=parseFloat(perValue);
  		
 		   	if(addMinusValue==1){
-		   		console.log("add Error"+perValue);
+		   	//	console.log("add Error"+perValue);
 		   		withError1=pulse1+perValue;
 		   	}
 		   	else
 		   		{
-		   		console.log("minus Error"+perValue);
+		   		//console.log("minus Error"+perValue);
 		   		withError1=pulse1-perValue;
 		   		}
 		   	withError=Math.round(withError1);
@@ -132,14 +132,14 @@ function application(){
 		   	tempstd=tempstd.toFixed(2);
 //		   	withError=Math.round(temp);
 //			console.log("pulse1 "+pulse1);
-		   	console.log("With Error"+withError);
+		   	//console.log("With Error"+withError);
 		   	flow=Math.round(tempstd);
 //		   	var answer1=((withError/pulse1)*100).toFixed(2);
 //		   	answer1=parseFloat(answer1);
 //		   	console.log("% "+answer1);
 //		   	flow=(answer1/100).toFixed(2);
 //		   	flow=parseFloat(flow);
-			console.log("flowAns "+flow);
+			//console.log("flowAns "+flow);
 			
  		
  	}
@@ -154,7 +154,8 @@ function application(){
 
 			if(flowAns=="" || isAlphabetical(flowAns)){
 				
-				$("#modelMsg1").html("Enter numeric value ");
+				 $("#modelMsg1").css("color", "red");
+				$("#modelMsg1").html("Enter numeric value");
 				
 			}
 			else
@@ -164,7 +165,7 @@ function application(){
 						
 						
 						 $("#modelMsg1").css("color", "#a94442");
-						$("#modelMsg1").html("Change the Speed and take  next reading .   ");
+						$("#modelMsg1").html("Change the speed and take next reading.");
 						$("#CalculateActualFlow1").prop("hidden",true);
 						$("#plus,#minus").prop("disabled",false);
 						 id=0;
@@ -176,7 +177,7 @@ function application(){
 					} else if (flowAns != flow) {
 						
 						 $("#modelMsg1").css("color", "red");
-					$("#modelMsg1").html("<b>Entered value is incorrect.Try again .</b> ");
+					$("#modelMsg1").html("<b>Entered value is incorrect. Try again.</b> ");
 					
 					}
 
@@ -192,7 +193,7 @@ function application(){
 						
 						
 						$("#modelMsg1").css("color", "#a94442");
-						$("#modelMsg1").html("<b>Change the Speed and take  next reading . </b> ");
+						$("#modelMsg1").html("<b>Change the speed and take next reading. </b> ");
 						$("#CalculateActualFlow1").prop("hidden",true);
 						$("#plus,#minus").prop("disabled",false);
 						id=0;
@@ -224,7 +225,7 @@ function application(){
 						tempJson={};
 						tempJson.actualPulsesCount=ansCountA;
 						resultMasterJson.actual=tempJson;
-						console.log(resultMasterJson);
+					//	console.log(resultMasterJson);
 						
 						}
  	
@@ -232,7 +233,7 @@ $("#minus").click(function(){
 		
 		if(rotationSpeed==0);
 		{
-			$("#modelMsg").html("Start Motor");
+			$("#modelMsg").html("Start motor");
 		}
  	});	
 var flg =0;
@@ -249,12 +250,12 @@ var flg =0;
     	
 			$("#light").prop("hidden",false);
 			 $('#light').addClass('blinking');
-			console.log(masterJson1);
+			//console.log(masterJson1);
 			$("#start").prop("disabled",true);	
 			$("#plus,#minus,#stop").prop("disabled",false);	
 			if(rotationSpeed!=0)
 			{
-				$("#modelMsg").html("Start Motor");
+				$("#modelMsg").html("Start motor");
 			}
 			else{
 			
@@ -273,7 +274,7 @@ $("#stop").click(function(){
 		$("#pulseValue").text("0");
 		if(rotationSpeed!=0)
 		{
-			$("#modelMsg").html("Start Motor");
+			$("#modelMsg").html("Start motor");
 		}
 		else{
 			$("#start").prop("disabled",false);
@@ -311,9 +312,9 @@ $("#stop").click(function(){
 	    var disc1endX = disc1startX + disc1width;
 	    var disc1endY = disc1startY + disc1height;
 
-	    console.log("#disc "+disc1);
-	    console.log("#rpmimg "+RPM);
-	    console.log("#shaft "+shaft);
+	  //  console.log("#disc "+disc1);
+	  //  console.log("#rpmimg "+RPM);
+	  //  console.log("#shaft "+shaft);
 	    
 	    $('#rpmImg').css('margin-top', '87%');
 	    $('#shaft').css('margin-top', '50%');
@@ -372,7 +373,7 @@ $("#stop").click(function(){
 		    		
 		    	
 		    		 rpmValue = parseInt(parseInt(rpmValue) + parseInt(100));
-					 console.log("rpmValue : "+rpmValue);
+					// console.log("rpmValue : "+rpmValue);
 					 
 				    	 rotationSpeed += rpmValue;  // Increase speed
 				    	 pulse=rpmValue*noh;
@@ -386,7 +387,7 @@ $("#stop").click(function(){
 		    		
 		    		$("#rpmValue").html(1000);
 		    		rpmValue=1000;
-					 console.log("rpmValue : "+rpmValue);
+					// console.log("rpmValue : "+rpmValue);
 					 
 				    	 rotationSpeed += rpmValue;  // Increase speed
 				    	 pulse=rpmValue*noh;
@@ -398,7 +399,7 @@ $("#stop").click(function(){
 		    	}
 		    	else{
 
-					$("#modelMsg").html("Maximum Speed is 1000");
+					$("#modelMsg").html("Maximum speed is 1000");
 		    	}
 		    		
 				
@@ -416,7 +417,7 @@ $("#stop").click(function(){
 			    	else{
 			    		
 						 rpmValue = parseInt(parseInt(rpmValue) - parseInt(100));
-						console.log("rpmValue : "+rpmValue);
+						//console.log("rpmValue : "+rpmValue);
 //					    	   rotationSpeed = Math.max(0, rotationSpeed - rpmValue);  // Decrease speed but not below 0
 								rotationSpeed -= rpmValue;
 								
