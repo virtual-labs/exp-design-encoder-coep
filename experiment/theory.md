@@ -4,8 +4,8 @@
 
 The tachometer, which uses the light for measuring the speed of rotation of a shaft or disc of machines is known as the photoelectric tachometer. The opaque disc with holes on its periphery, light source and laser are the essential parts of the photoelectric tachometer. The tachometer consists of the opaque disc, which is mounted on the shaft whose speed needs to be measured. The disc consists of the equivalent holes around the periphery. The light source is placed on one side of the disc and the light sensor on the other side. They are in line with each other. When the opaque portion comes in the line of light source and sensor, then the disc blocks the light source, and the output becomes zero. The production of pulses depends on the following factor-
 
-- The number of holes on the disc.
-- The speed of rotation of the disc.
+- The number of holes on the disc
+- The speed of rotation of the disc
 
 The holes are fixed, and hence the pulse generation depends on the speed of the rotation of the disc. The electronic counter is used for measuring the pulse rate.
 
