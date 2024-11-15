@@ -1,1 +1,1 @@
-## Design of Encoder and its application
+## Design of encoder and its application
