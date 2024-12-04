@@ -6,8 +6,8 @@
       "answers": {
          "a": "Watts",
         "b": "Hertz",
-        "c": " Revolutions per minute (RPM)",
-        "d": "  Volts"
+        "c": "Revolutions per minute (RPM)",
+        "d": "Volts"
       },
       
       "correctAnswer": "c",
@@ -17,7 +17,7 @@
       "question": "What is the advantage of using a photoelectric tachometer over a mechanical one?",
       "answers": {
         "a": "Lower cost",
-        "b": " Higher accuracy",
+        "b": "Higher accuracy",
         "c": "Simplicity of design",
         "d": "No power source required"
       },
@@ -31,7 +31,7 @@
         "a": "Phototube or photosensitive semiconductor device",
         "b": "Thermistor",
         "c": "Strain gauge",
-        "d": " Pressure sensor"
+        "d": "Pressure sensor"
       },
      
       "correctAnswer": "a",
@@ -54,20 +54,13 @@
       "question": "Why might a photoelectric tachometer be preferred in digital instrumentation systems?",
       "answers": {
         "a": "Its cheaper than other tachometers",
-        "b": " It directly provides a digital output",
-        "c": " It has an analog-to-digital converter",
-        "d": " It does not require a power source"
+        "b": "It directly provides a digital output",
+        "c": "It has an analog-to-digital converter",
+        "d": "It does not require a power source"
       },
      
       "correctAnswer": "b",
       "difficulty": "beginner"
-    }
-  
-  
-  
-  
-  
-  
-  
+    }  
   ]
 }

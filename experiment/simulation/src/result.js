@@ -7,7 +7,7 @@ function result(){
 		+'</div>'
 		+'<div class="col-sm-8 nameTitle" style="background-color:#304250">'
 		+'<span>'
-		+'<h3><center style="font-weight: bold;">ENCODER </center></h3>'
+		+'<h3><center style="font-weight: bold;">TACHOMETER </center></h3>'
 
 		+'</span>'
 		+'</div>'
@@ -46,7 +46,7 @@ function result(){
 		+'		 <table class="table table-bordered" style=" vertical-align: middle;">'
 		+'    <thead class="thead" style="background-color: #445f66;color: #fff;">'
 		+'      <tr>'
-		+'        <th>COMPETENCY ( ENCODER )</th>'
+		+'        <th>COMPETENCY ( TACHOMETER )</th>'
 		+'        <th>STATUS</th>'
 
 
