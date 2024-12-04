@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Tachometer </title>
+<meta charset="ISO-8859-1">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" > -->
+    <link rel="stylesheet" href=" https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/mainPage.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/encoder.css">
+	<link rel="stylesheet" href="css/mimicStyle.css">
+<link rel="stylesheet" href="css/result.css">
+</head>
+<style>
+.button1 {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+ 
+  font-family: Arial;
+  font-size: 15px;
+ padding: 7px 10px; 
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -webkit-box-shadow: 0 0 20px #FF0000; }
+  100% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; -moz-box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; -moz-box-shadow: 0 0 3px #B20000; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+
+@keyframes glowing {
+  0% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+  50% { background-color: #FF0000; box-shadow: 0 0 40px #FF0000; }
+  100% { background-color: #B20000; box-shadow: 0 0 3px #B20000; }
+}
+@keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    /* Blinking class */
+    .blinking {
+        animation: blink 1s infinite;
+    }
+.blink {
+            animation: blinker 1.5s linear infinite;
+            color: red;
+            font-family: sans-serif;
+			font-weight: bold;
+			background: #ebe2d4;
+			padding: 7px 20px;
+			border-radius: 15px;
+        }
+        @keyframes blinker {
+            70% {
+                opacity: 0.2;
+            }
+        }
+</style>
+
+<body  >
+
+<header>
+		<img class="COEPLogo" src='images/COEPlogo.png' />
+		<img class="VlabLogo" src='images/vlablogo.jpg' />
+		<span id="colgName">COEP TECHNOLOGICAL UNIVERSITY PUNE</span>		
+		
+	</header>
+	<div class="row container-fluid" >
+	<div  class="col-sm-12" >      
+	
+	<button class="btn btn-danger btn1" id="saveAsJpg" hidden><b>Download result</b></button>
+	 <button type="button" id="simDemo" class="btn btn-danger btn1" data-toggle="modal" data-target="#readProcedureModal1" ><b>Simulation Demo</b> </button>
+	<button class="btn btn-danger button1 btn1" id="procedure" data-toggle="modal" data-target="#myModalRow"><b>Procedure</b></button>
+	
+	</div>
+	</div>
+	
+	
+
+<div id="readProcedureModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog  modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title mdltitle" ><center>DEMO</center></h3>
+<!--         <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+      </div>
+      <div class="modal-body12">
+ 
+<!--     <video width="90%" id="simVideo" controls> -->
+<!--   <source src="images/simulation.mp4" type="video/mp4"> -->
+  
+<!-- </video> -->
+<center><video id="simVideo" width="90%" controls>
+    <source src="images/tachometer.mkv" type="video/mp4" >
+    Your browser does not support the video tag.
+</video></center>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- The Modal -->
+<div class="modal" id="myModalRow">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">PROCEDURE </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" style="color:#682624;">
+      Attempt all questions<br/>
+       Step 1 : Select number of holes on the disc<br>
+       Step 2 : Select speed from drop-down menu<br> 
+       Step 3 : Calculate pulses for selected speed<br>
+       Step 4 : Repeat steps 1 to 3 for different 5 readings <br>
+        Step 5 : Go to next level<br>
+        Step 6 : Click on start button and set RPM <br>
+        Step 7 : Observe the pluses then click on take reading button and calculate accuracy (%) <br>
+        Step 8 : Repeat steps 6 and 7 for different 5 readings <br>
+         Step 9 : Go to next level and observe graph<br>
+         
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+	<div  class="row typeSelector" id="selectionOfType" hidden>
+	<div  class="col-sm-2">
+<!-- 	 <label for="sel1">Select list (select one):</label> -->
+	 </div>
+	<div  class="col-sm-2">
+	 <label for="sel1">SELECT TACHOMETER TYPE</label>
+	 </div>
+	
+     <div  class="col-sm-5"> 
+      <select class="form-control" id="typetacho"  >
+        <option value="0">--- Select Tachometer Type --- </option>
+	   <option value="1">Photoelectric Tachometer</option>
+	  <option value="2">Toothed Rotor Variable Reluctance Tachometer</option>
+<!-- 	   <option value="40">Ring type load cell</option> -->
+      </select>
+      </div>
+      <div  class="col-sm-2">
+	 <span for="sel1" id="error"></span>
+	 </div>
+      
+    
+      </div>
+<div  class="row container-fluid" id="main-div1" style="margin-top: -24px;">
+	<div class="col-lg-6" id="main-div" style="font-family: Verdana, sans-serif;margin-bottom: 20px;">
+				<div class="panel panel-primary">
+	      			<div class="panel-heading " id="panelHeading1"><center id="centerText1" class="panelHeadingBold"> DIAGRAM </center>
+	      			</div>
+	      			
+	     			<div class="panel-body" id="main-div-conf" >
+	     			<img src="images/mainPage.png" style="margin-top:20px" class="img-fluid" >
+	     			</div>
+	      			<div class="panel-body" id="tableDesign">
+	      			
+	      			</div>
+					<div class="panel-body" id="stdTable">
+	      			
+	      			</div>
+	      			<div class="panel-body" id="actualTable">
+	      			
+	      			</div>
+	      			<div class="row">
+					<div class="col-sm-12" id="table2">
+							
+					</div>
+					</div>
+	      			
+
+	     		</div>
+	   	</div>
+	   
+	   
+			<div class="col-lg-6" id="canvas">
+	             <div class="panel panel-primary" >
+	      			<div class="panel-heading " id="panelHeading2" ><center id="centerText2" class="panelHeadingBold">BASIC KNOWLEDGE</center>
+	      			</div>
+	      			
+	      			<div class="panel-body" id="canvas-div" style="margin-top: -21px;">
+	      			
+	      			
+	      			</div>
+	      			<div class="panel-body" id='action'>
+ 						<button class="btn btn-success" id="start" hidden>Start</button>
+ 						<button class="btn btn-danger" id="stop" hidden disabled>Stop</button>
+	      			</div>
+	      			
+					<div class="panel-body"  id="discDiv"  style=" border-style: dashed;margin:20px;" hidden>
+					
+					
+					<div class="row">
+						<div class="col-sm-1">
+						 <button class="btn btn-danger" id="minus"><i class="fa fa-minus" disabled></i></button>
+						</div>
+						<div class="col-sm-1">
+					       <span id="rpmValue" value="0">0</span>
+						</div>
+						<div class="col-sm-1">
+						 <button class="btn btn-success" id="plus"><i class="fa fa-plus" disabled></i></button>
+						</div>
+					</div>
+					
+					<div class="row" >
+					
+						<div class="col-sm-2" >
+						<img src="images/RPM.png" id="rpmImg" class="img-responsive rpmimg"  >
+						</div>
+						
+						<div class="col-sm-4" >
+						<img src="images/shaft1.png" id="shaft"  class="img-responsive">
+	<!-- 					<span class="indicator" ></span>  -->
+						</div>
+					   <div class="col-sm-3" >
+					   	<img  src="images/light12.PNG" id="light" class="img-responsive"  hidden></img>
+						<img  id="disc" class="img-responsive"></img>
+						</div>
+						<div class="col-sm-2" id="pulseDiv" >
+						<center > Pulses :<br><br><span id="pulseValue" class="pulses1" ><b>0</b></span></center>
+						</div>
+					</div>
+					<div class="row">
+					<div class="col-sm-12">
+<!-- 					<span id="pulseDisplay" hidden></span><b>PULSE:</b> <span id="pulseContainer" hidden></span> -->
+<!-- 						<span id="pulseDisplay" hidden></span><b></b> <span id="pulseContainer" hidden></span> -->
+					</div>
+					</div>
+					<div class="row">
+					<div class="col-sm-9">
+					
+					</div>
+					<div class="col-sm-3">
+							 <button type="submit" class="btn btn-danger" id="reading"  data-toggle="modal" data-target="#myModal1" hidden disabled>TAKE READING</button>
+			          </div>
+				
+					</div>
+					
+<!-- 					<div class="row"> -->
+<!-- 					<div class="col-sm-12"> -->
+<!-- 							<audio id="noiseSound" src="music/music1.mp3" ></audio> -->
+<!-- 					</div> -->
+<!-- 					</div> -->
+					
+	      			
+	      			</div>
+	      			
+					
+	      	
+	      		</div>
+	       </div>
+	</div>
+	<div  class="container-fluid resultMainPage" id="main-divResult" style="margin-bottom:60px;margin-top:30px" hidden>
+
+	</div>
+	<footer>
+Copyrights &copy; COEPTECH - Virtual Labs
+</footer>
+<script src="../assets/js/iframeResize.js"></script></body>
+
+<!-- https://code.jquery.com/jquery-3.5.1.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+<script type="text/javascript" src="lib/raphael.js"></script>
+<script type="text/javascript" src="lib/raphael.min.js"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+ 
+ 
+  <script type="text/javascript" src="src/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script type="text/javascript" src="src/questionJson.js"></script>
+<script type="text/javascript" src="src/questions.js"></script>
+<!-- <script type="text/javascript" src="src/fualtFinding.js"></script> -->
+<script type="text/javascript" src="src/mainPage.js"></script>
+
+<script type="text/javascript" src="src/mimic.js"></script>
+<script type="text/javascript" src="src/table.js"></script>
+<script type="text/javascript" src="src/table2.js"></script>
+<script type="text/javascript" src="src/application.js"></script>
+
+<script type="text/javascript" src="src/compareGraph.js"></script>
+<script type="text/javascript" src="src/result.js"></script>
+<!-- <script type="text/javascript" src="src/resultAnaylsis.js"></script> -->
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+<!--   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+<script>
+$(document).ready(function() {
+    // Select the image
+    
+});
+
+
+
+function isAlphabetical(input) {
+    return /^[A-Za-z]+$/.test(input);
+}
+$('#readProcedureModal1').click(function(){
+
+	 $('video').each(function(){
+		    $(this).get(0).pause();
+		  })
+	})
+$("#procedure").on("click", function(){
+$("body").css("padding","0px");
+});
+$("#simDemo").on("click", function(){
+	$("body").css("padding","0px");
+	var video = document.getElementById("simVideo");
+
+	// Define the start and end skip times (in seconds)
+	var skipStart = 2;  // Skip the first 5 seconds
+	var skipEnd = 5;    // Skip the last 5 seconds
+
+// 	video.onloadedmetadata = function() { 
+	    // Get the duration of the video
+	    var videoDuration = video.duration;
+
+	    // Ensure the video plays between skipStart and (duration - skipEnd)
+	    video.currentTime = skipStart;
+
+	    // Event listener to pause the video when it reaches the end limit (video duration - skipEnd)
+	    video.ontimeupdate = function() {
+	        if (video.currentTime >= videoDuration - skipEnd) {
+	            video.pause();
+				video.currentTime = skipStart;
+	        }
+	    };
+
+	    // Prevent seeking outside the allowed time range
+	    video.addEventListener('seeking', function(event) {
+	        // If seeking before the start time or after the allowed end time, reset the current time
+	        if (video.currentTime < skipStart) {
+	            video.currentTime = skipStart;
+	        } else if (video.currentTime > videoDuration - skipEnd) {
+	            //video.currentTime = videoDuration - skipEnd;
+				video.currentTime = skipStart;
+	        }
+	    });
+// 	};
+	
+	video.play();
+})
+</script>
+</html>

@@ -1,0 +1,66 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": " What is the typical output signal of a tachometer?",
+      "answers": {
+         "a": "Analog voltage",
+        "b": "Digital pulse",
+        "c": "Frequency",
+        "d": "Current"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In a photoelectric tachometer, what is the relationship between pulse rate and rotational speed?",
+      "answers": {
+        "a": "Pulse rate is directly proportional to speed",
+        "b": "Pulse rate is inversely proportional to speed",
+        "c": "Pulse rate remains constant regardless of speed",
+        "d": "Pulse rate depends only on light intensity"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following can help improve accuracy in a photoelectric tachometer?",
+      "answers": {
+        "a": "Using fewer holes on the disc",
+        "b": "Increasing the gating period",
+        "c": "Decreasing the speed of rotation",
+        "d": "Lowering the pulse rate"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "What is a significant disadvantage of the photoelectric tachometer?",
+      "answers": {
+        "a": "High cost of the opaque disc",
+        "b": "Limited lifespan of the light source",
+        "c": "Inconsistent pulse amplitudes",
+        "d": "Difficult calibration"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Why does a photoelectric tachometer not require analog-to-digital conversion?",
+      "answers": {
+        "a": "It produces digital output directly",
+        "b": "It has an integrated converter",
+        "c": "The output is purely analog",
+        "d": "It uses a mechanical counter"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }  
+  ]
+}

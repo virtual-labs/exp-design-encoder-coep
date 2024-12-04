@@ -1,0 +1,66 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": " What unit is commonly used to express the speed measured by a tachometer?",
+      "answers": {
+         "a": "Watts",
+        "b": "Hertz",
+        "c": "Revolutions per minute (RPM)",
+        "d": "Volts"
+      },
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the advantage of using a photoelectric tachometer over a mechanical one?",
+      "answers": {
+        "a": "Lower cost",
+        "b": "Higher accuracy",
+        "c": "Simplicity of design",
+        "d": "No power source required"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which type of sensor is commonly used in photoelectric tachometers?",
+      "answers": {
+        "a": "Phototube or photosensitive semiconductor device",
+        "b": "Thermistor",
+        "c": "Strain gauge",
+        "d": "Pressure sensor"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "What determines the lifespan of the photoelectric tachometer's light source?",
+      "answers": {
+        "a": "Number of holes in the disc",
+        "b": "Type of sensor used",
+        "c": "Continuous usage hours",
+        "d": "Output pulse rate"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "Why might a photoelectric tachometer be preferred in digital instrumentation systems?",
+      "answers": {
+        "a": "Its cheaper than other tachometers",
+        "b": "It directly provides a digital output",
+        "c": "It has an analog-to-digital converter",
+        "d": "It does not require a power source"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }  
+  ]
+}
