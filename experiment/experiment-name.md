@@ -1,1 +1,1 @@
-## Design of encoder and its application
+## Design of speed sensor and its application
