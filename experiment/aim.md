@@ -1,5 +1,5 @@
 ### Aim
-  Understand operation of encoder
+  Understand operation of speed sensor
   
 ### Objectives 
 - Understand working of photoelectric tachometer  
