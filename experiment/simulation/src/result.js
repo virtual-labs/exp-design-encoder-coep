@@ -257,7 +257,7 @@ function result(){
 		        $("canvas").css("display","none");
 		        // Optionally save the screenshot as an image
 		        var link = document.createElement('a');
-		        link.download = 'Encoder_report.png';
+		        link.download = 'Tachometer_report.png';
 		        link.href = canvas.toDataURL();
 		        link.click();
 		    });
